@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+GlobalGameJam2021/[Ll]ibrary/
+GlobalGameJam2021/[Tt]emp/
+GlobalGameJam2021/[Oo]bj/
+GlobalGameJam2021/[Bb]uild/
+GlobalGameJam2021/[Bb]uilds/
+GlobalGameJam2021/[Ll]ogs/
+GlobalGameJam2021/[Mm]emoryCaptures/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
