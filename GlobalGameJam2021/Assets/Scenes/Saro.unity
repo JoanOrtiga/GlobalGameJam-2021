@@ -1313,6 +1313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7786233850678055756, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7786233850678055757, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: uiBatteries.Array.data[0]
       value: 
@@ -1376,6 +1380,10 @@ PrefabInstance:
     - target: {fileID: 7786233850678055758, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786233850678055792, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7786233850678055793, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: m_Name
