@@ -7,10 +7,12 @@ public class CharacterMovement : MonoBehaviour
     public float speed;
     private Vector3 movement;
     private Animator animator;
+    private Rigidbody2D rb;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -26,6 +28,6 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(movement * speed * Time.deltaTime);
+        rb.velocity = movement * speed;
     }
 }
