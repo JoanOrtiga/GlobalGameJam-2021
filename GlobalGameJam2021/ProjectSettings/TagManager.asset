@@ -46,6 +46,9 @@ TagManager:
   - name: asdasd
     uniqueID: 2175319003
     locked: 0
+  - name: Decoration
+    uniqueID: 3249561411
+    locked: 0
   - name: Player
     uniqueID: 1676037251
     locked: 0
