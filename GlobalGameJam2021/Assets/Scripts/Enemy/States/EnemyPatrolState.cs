@@ -12,27 +12,24 @@ public class EnemyPatrolState : State<EnemyMachine>
     }
 
     public override void Enter(EnemyMachine entity)
-    {   
-       if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
+    {
+        if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
     }
 
     public override void Execute(EnemyMachine entity)
     {
-        if(!entity.staticPatrolling)
+        if (!entity.staticPatrolling)
             Move(entity);
-        /*
+
         if (entity.SeesPlayer())
         {
-            if (entity.IsInAttackDistance())
-                entity.pStateMachine.ChangeState(GoombaAttackState.Instance);
-            else
-                entity.pStateMachine.ChangeState(GoombaChaseState.Instance);
-        }*/
+            entity.pStateMachine.ChangeState(EnemyChaseState.Instance);
+        }
     }
 
     public override void Exit(EnemyMachine entity)
     {
-       
+
     }
 
     private void MoveToNextPatrolPosition(EnemyMachine entity)
