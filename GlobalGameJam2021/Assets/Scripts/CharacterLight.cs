@@ -1,53 +1,79 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class CharacterLight : MonoBehaviour
 {
     public Light2D playerLight;
 
+    public bool isOn = true;
+
     public float batteryTimer;
+    public float batteryTimerMax;
+
     public int batteryCounter;
     public int batteryCounterMax;
 
-    public List <Battery> batteries;
-
-    private void Start()
-    {
-        batteries = new List<Battery>();
-    }
+    public Image[] uiBatteries;
+    public Sprite[] sprites;
+    //0 - empty
+    //1 - full
 
     private void Update()
     {
-        if (batteryCounter > 0) LightOn();
-        else LightOff();
+        UpdateBatteryUI();
 
-        foreach (Battery b in batteries)
+        if (isOn && batteryTimer > 0)
         {
-            StartCoroutine("BatteryDecrease");
+            batteryTimer -= Time.deltaTime;
+            LightOn();
+        }
+        else
+        {
+            LightOff();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) //Cambiar por GetButtonDown("CambiarLuz")
+        {
+            if (isOn) LightOff();
+            else LightOn();
         }
     }
 
-    public void AddLight(float time)
+    public void AddLight()
     {
-        batteryCounter++;
-        batteryTimer = time;
+        batteryCounter = batteryCounterMax;
+        batteryTimer = batteryTimerMax;
+        LightOn();
     }
 
     void LightOn()
     {
         playerLight.pointLightOuterRadius = 5;
+        isOn = true;
     }
 
     void LightOff()
     {
         playerLight.pointLightOuterRadius = 1;
+        isOn = false;
     }
 
-    public IEnumerator BatteryDecrease()
+    public void UpdateBatteryUI()
     {
-        yield return new WaitForSeconds(batteryTimer);
-        batteryCounter--;
+        float batteryPerc = 100 / batteryCounterMax;
+        float timerPerc = batteryTimer * 100 / batteryTimerMax;
+
+        for (int i = 0; i < uiBatteries.Length; i++)
+        {
+            if (i < timerPerc / batteryPerc)
+            {
+                uiBatteries[i].sprite = sprites[1];
+                batteryCounter = i + 1;
+            }
+            else uiBatteries[i].sprite = sprites[0];
+        }
     }
 }

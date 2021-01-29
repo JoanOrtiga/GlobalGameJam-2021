@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    public float batteryTimer;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -13,7 +11,7 @@ public class Battery : MonoBehaviour
             CharacterLight character = collision.gameObject.GetComponent<CharacterLight>();
             if (character.batteryCounter < character.batteryCounterMax)
             {
-                character.AddLight(batteryTimer);
+                character.AddLight();
                 Destroy(gameObject);
             }
         }
