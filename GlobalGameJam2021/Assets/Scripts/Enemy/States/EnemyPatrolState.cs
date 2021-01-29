@@ -12,14 +12,43 @@ public class EnemyPatrolState : State<EnemyMachine>
     }
 
     public override void Enter(EnemyMachine entity)
-    {      
-        MoveToNextPatrolPosition(entity);
+    {
+        if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
     }
 
     public override void Execute(EnemyMachine entity)
     {
+        if (!entity.staticPatrolling)
+            Move(entity);
 
+        if (entity.SeesPlayer())
+        {
+            entity.pStateMachine.ChangeState(EnemyChaseState.Instance);
+        }
+    }
 
+    public override void Exit(EnemyMachine entity)
+    {
+
+    }
+
+    private void MoveToNextPatrolPosition(EnemyMachine entity)
+    {
+        entity.destinationSetter.target = entity.waypoints[entity.currentWaypointID];
+    }
+
+    private void UpdateWaypointID(EnemyMachine entity)
+    {
+        entity.currentWaypointID++;
+
+        if (entity.currentWaypointID >= entity.waypoints.Count)
+        {
+            entity.currentWaypointID = 0;
+        }
+    }
+
+    private void Move(EnemyMachine entity)
+    {
         if (entity.aiPath.reachedEndOfPath)
         {
             if (!entity.untilPathOff)
@@ -35,36 +64,6 @@ public class EnemyPatrolState : State<EnemyMachine>
         else
         {
             entity.untilPathOff = false;
-        }
-
-        /*
-
-        if (entity.SeesPlayer())
-        {
-            if (entity.IsInAttackDistance())
-                entity.pStateMachine.ChangeState(GoombaAttackState.Instance);
-            else
-                entity.pStateMachine.ChangeState(GoombaChaseState.Instance);
-        }*/
-    }
-
-    public override void Exit(EnemyMachine entity)
-    {
-       
-    }
-
-    private void MoveToNextPatrolPosition(EnemyMachine entity)
-    {
-        entity.destinationSetter.target = entity.waypoints[entity.currentWaypointID];
-    }
-
-    private void UpdateWaypointID(EnemyMachine entity)
-    {
-        entity.currentWaypointID++;
-
-        if (entity.currentWaypointID >= entity.waypoints.Count)
-        {
-            entity.currentWaypointID = 0;
         }
     }
 }
