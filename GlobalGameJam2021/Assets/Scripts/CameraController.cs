@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController : MonoBehaviour, RestartableObject
 {
     public Transform target;
     private float posX;
@@ -12,6 +12,14 @@ public class CameraController : MonoBehaviour
     public float shakeDuration;
     public float shakeAmount;
     Vector3 originalPos;
+
+    public Vector3 initPos { get; set; }
+    public Quaternion initRot { get; set; }
+
+    private void Start()
+    {
+        GameManager.instance.restartables.Add(this);
+    }
 
     private float RoundTwo(float num)
     {
@@ -44,5 +52,17 @@ public class CameraController : MonoBehaviour
             Debug.Log("Shake");
             yield return null;
         }
+    }
+
+    public void InitRestart()
+    {
+        initPos = transform.position;
+        initRot = transform.rotation;
+    }
+
+    public void Restart()
+    {
+        transform.position = initPos;
+        transform.rotation = initRot;
     }
 }
