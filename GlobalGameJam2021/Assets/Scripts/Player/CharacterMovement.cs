@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour, RestartableObject
 {
     public float speed, crouchSpeed;
     private bool crouch = false;
@@ -20,12 +20,17 @@ public class CharacterMovement : MonoBehaviour
             }
         }
     }
+
+    public Vector3 initPos { get; set; }
+    public Quaternion initRot { get; set; }
+
     private Vector3 movement;
     private Animator animator;
     private Rigidbody2D rb;
 
     private void Start()
     {
+        GameManager.instance.restartables.Add(this);
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -52,5 +57,17 @@ public class CharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = movement * GetSpeed;
+    }
+
+    public void InitRestart()
+    {
+        initPos = transform.position;
+        initRot = transform.rotation;
+    }
+
+    public void Restart()
+    {
+        transform.position = initPos;
+        transform.rotation = initRot;
     }
 }

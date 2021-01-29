@@ -11,7 +11,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     }
 
     //Restart Variables
-    [HideInInspector] public Vector2 initPos { get; set; }
+    [HideInInspector] public Vector3 initPos { get; set; }
     [HideInInspector] public Quaternion initRot { get; set; }
 
 
