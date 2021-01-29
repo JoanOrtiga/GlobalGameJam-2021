@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class FootSteps : MonoBehaviour
 {
-    public float footsteptsSpeed;
-    private bool isColliding, isMoving;
     private AudioSource source;
     [SerializeField] private AudioClip[] footsteps;
     private int currentIndex = 0;
     private float cooldown;
     [SerializeField] private float timeBetweenSteps;
+    private float setted;
+    private Rigidbody2D rb;
     private void Start()
     {
         cooldown = timeBetweenSteps;
         currentIndex = 0;
-        source = GetComponent<AudioSource>(); 
+        source = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
     }
-    private void FixedUpdate()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            setted = timeBetweenSteps;
+            timeBetweenSteps *= 2;
+            source.volume /= 3;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            timeBetweenSteps = setted;
+            source.volume *= 3;
+        }
         PlayFootStepts();
     }
     private void PlayFootStepts()
     {
-        if (isMoving && !isColliding && cooldown <0)
+        if (((rb.velocity.x > 0.2f || rb.velocity.y > 0.2f) || (rb.velocity.x < -0.2f || rb.velocity.y < -0.2f)) && cooldown <= 0)
         {
+            source.pitch = Random.Range(0.7f, 1.3f);
             cooldown = timeBetweenSteps;
             currentIndex = (currentIndex + 1) % footsteps.Length;
-            source.clip = footsteps[currentIndex];
+            source.PlayOneShot(footsteps[currentIndex]);
         }
         else
         {
             cooldown -= Time.deltaTime;
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        isColliding = true;
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isColliding = false;
     }
 }
