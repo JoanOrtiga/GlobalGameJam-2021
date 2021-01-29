@@ -12,33 +12,15 @@ public class EnemyPatrolState : State<EnemyMachine>
     }
 
     public override void Enter(EnemyMachine entity)
-    {      
-        MoveToNextPatrolPosition(entity);
+    {   
+       if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
     }
 
     public override void Execute(EnemyMachine entity)
     {
-
-
-        if (entity.aiPath.reachedEndOfPath)
-        {
-            if (!entity.untilPathOff)
-            {
-                entity.untilPathOff = true;
-
-                UpdateWaypointID(entity);
-
-
-                MoveToNextPatrolPosition(entity);
-            }
-        }
-        else
-        {
-            entity.untilPathOff = false;
-        }
-
+        if(!entity.staticPatrolling)
+            Move(entity);
         /*
-
         if (entity.SeesPlayer())
         {
             if (entity.IsInAttackDistance())
@@ -65,6 +47,26 @@ public class EnemyPatrolState : State<EnemyMachine>
         if (entity.currentWaypointID >= entity.waypoints.Count)
         {
             entity.currentWaypointID = 0;
+        }
+    }
+
+    private void Move(EnemyMachine entity)
+    {
+        if (entity.aiPath.reachedEndOfPath)
+        {
+            if (!entity.untilPathOff)
+            {
+                entity.untilPathOff = true;
+
+                UpdateWaypointID(entity);
+
+
+                MoveToNextPatrolPosition(entity);
+            }
+        }
+        else
+        {
+            entity.untilPathOff = false;
         }
     }
 }

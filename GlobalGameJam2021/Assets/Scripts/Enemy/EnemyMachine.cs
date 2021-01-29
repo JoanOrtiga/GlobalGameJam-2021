@@ -24,6 +24,8 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     [HideInInspector] public int currentWaypointID = 0;
     [HideInInspector] public bool untilPathOff;
 
+    [Header("SEE PLAYER")]
+
 
 
     //Extern Components;
