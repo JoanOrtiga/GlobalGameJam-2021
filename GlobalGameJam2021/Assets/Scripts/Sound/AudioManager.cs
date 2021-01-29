@@ -61,12 +61,8 @@ public class AudioManager : MonoBehaviour
     }
     public void StopAttacking()
     {
-        if (Time.timeSinceLevelLoad > 60)
-        {
-            currentIndex++;
-            currentIndex %= musicClips.Length; 
-        }
-        SetMusicClip(attackClips[currentIndex]);
+        currentIndex++;
+        SetMusicClip(musicClips[currentIndex]);
     }
     public void IsHide()
     {
@@ -75,5 +71,10 @@ public class AudioManager : MonoBehaviour
     public void StopHiding()
     {
         GetComponent<AudioLowPassFilter>().enabled = false;
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+        currentIndex++;
+        SetMusicClip(musicClips[currentIndex]);
     }
 }
