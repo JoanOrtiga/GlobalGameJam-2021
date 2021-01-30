@@ -105,7 +105,11 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     //Reinicia amb la llum al maxim
     public void Restart()
     {
-        batteryCounter = batteryCounterMax;
+        if(batteryCounter <= 1)
+        {
+            batteryCounter = 2;
+        }
+
         batteryTimer = batteryTimerMax;
         LightOn();
     }
