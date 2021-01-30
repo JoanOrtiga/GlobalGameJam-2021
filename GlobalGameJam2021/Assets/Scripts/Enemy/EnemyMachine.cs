@@ -44,6 +44,11 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     public Transform lastHeardTransform;
     public float timeToReturn = 1f;
 
+    [Header("SPEED")]
+    public float patrolSpeed = 1;
+    public float chaseSpeed = 1;
+    public float heardSomethingSpeed = 1;
+
     [Header("DEBUG")]
     public bool drawGizmos = false;
 
@@ -96,8 +101,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
 
         if(player != null & enemyEyes != null)
         {
-            Gizmos.DrawLine(enemyEyes.position, enemyEyes.position + (player.position - enemyEyes.position).normalized * 5);
-            Gizmos.DrawLine(enemyEyes.transform.position, enemyEyes.transform.position + transform.up * 5);
+            Gizmos.DrawLine(enemyEyes.position, enemyEyes.position + (player.position - enemyEyes.position));
         }
 
         Gizmos.DrawWireSphere(transform.position, hearNormalSteps);
@@ -187,5 +191,12 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
         }
 
         return false;
+    }
+
+    public void HeardRandomSound(Vector2 position)
+    {
+        lastHeardTransform.position = position;
+
+        stateMachine.ChangeState(HearedSomethingState.Instance);
     }
 }

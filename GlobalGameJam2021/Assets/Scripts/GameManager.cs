@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
     public List<RestartableObject> restartables = new List<RestartableObject>();
 
+    public bool paused;
+
     private void Awake()
     {
         if (instance == null)
@@ -30,5 +32,25 @@ public class GameManager : MonoBehaviour
                 restartable.Restart();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!paused)
+                Pause();
+            else
+                UnPause();
+        }
+    }
+
+    private void Pause()
+    {
+        paused = true;
+        Time.timeScale = 0;
+    }
+
+    public void UnPause()
+    {
+        paused = false;
+        Time.timeScale = 1;
     }
 }
