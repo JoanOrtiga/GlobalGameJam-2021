@@ -27,6 +27,9 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     private void Start()
     {
         GameManager.instance.restartables.Add(this);
+        batteryTimer = batteryTimerMax;
+        LightOff();
+        isOn = false;
     }
 
     private void Update()
@@ -43,11 +46,19 @@ public class CharacterLight : MonoBehaviour, RestartableObject
             LightOff();
         }
 
-        //Ajustar la tecla que se quiera usar
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isOn) LightOff();
-            else LightOn();
+            switch (isOn)
+            {
+                case true:
+                    Debug.Log("OFFFFF");
+                    LightOff();
+                    break;
+                case false:
+                    Debug.Log("ONN");
+                    LightOn();
+                    break;
+            }
         }
     }
 
