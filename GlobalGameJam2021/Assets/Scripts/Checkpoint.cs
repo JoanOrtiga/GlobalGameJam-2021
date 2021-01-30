@@ -10,9 +10,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !checkpointActive)
         {
-            RestartableObject restartableCam = Camera.main.GetComponent<RestartableObject>();
             collision.GetComponent<RestartableObject>().InitRestart();
-            restartableCam.InitRestart();
             checkpointActive = true;
             Debug.Log("Checkpoint");
         }

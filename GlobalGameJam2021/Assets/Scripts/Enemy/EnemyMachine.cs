@@ -140,8 +140,8 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
         return false;
     }
 
-    public bool HeardSomething()
-    {
-        Vector2 direction = player.position - enemyEyes.position;
-    }
+    //public bool HeardSomething()
+    //{
+    //    Vector2 direction = player.position - enemyEyes.position;
+    //}
 }
