@@ -13,10 +13,12 @@ public class HearedSomethingState : State<EnemyMachine>
 
     public override void Enter(EnemyMachine entity)
     {
-        entity.destinationSetter.target = entity.lastHeardTransform;
+        // entity.destinationSetter.target = entity.lastHeardTransform;
         entity.timer = entity.timeToReturn;
 
         entity.aiPath.maxSpeed = entity.heardSomethingSpeed;
+
+        
     }
 
     public override void Execute(EnemyMachine entity)
@@ -39,7 +41,15 @@ public class HearedSomethingState : State<EnemyMachine>
         if (entity.HeardSomething())
         {
             entity.timer = entity.timeToReturn;
+
         }
+
+        if (!entity.CheckMaxPathLength())
+        {
+            entity.pStateMachine.ChangeState(EnemyPatrolState.Instance);
+        }
+
+        
     }
 
     public override void Exit(EnemyMachine entity)
