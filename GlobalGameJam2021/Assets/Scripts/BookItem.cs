@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Battery : MonoBehaviour
+public class BookItem : MonoBehaviour
 {
+    public int bookIndex;
+
     public bool playerArround = false;
-    private CharacterLight character;
+    private CharacterInventory character;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && playerArround)
         {
-            character.AddLight();
+            character.AddBook(bookIndex);
             Destroy(gameObject);
         }
     }
@@ -20,7 +22,7 @@ public class Battery : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            character = collision.gameObject.GetComponent<CharacterLight>();
+            character = collision.gameObject.GetComponent<CharacterInventory>();
             playerArround = true;
         }
     }
