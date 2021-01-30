@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Escondite : MonoBehaviour , RestartableObject
 {
@@ -54,6 +55,7 @@ public class Escondite : MonoBehaviour , RestartableObject
                 playerTransform.position = spawnSpot.position;
                 playerMovement.hiding = false;
                 colliderBox.enabled = true;
+                GetComponent<ShadowCaster2D>().enabled = true;
                 playerMovement.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
             else
@@ -65,6 +67,7 @@ public class Escondite : MonoBehaviour , RestartableObject
                 playerTransform.position = hideSpot.position;
                 playerMovement.hiding = true;
                 colliderBox.enabled = false;
+                GetComponent<ShadowCaster2D>().enabled = false;
                 playerMovement.rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
             }
