@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+    }
+
+    private void Start()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Update()
@@ -57,5 +64,24 @@ public class GameManager : MonoBehaviour
         {
             item.Restart();
         }
+    }
+
+    public void NextScene(int sceneToLoad)
+    {
+        //Fade in.
+       FindObjectOfType<FadeInOut>().fadeIn();
+
+       
+
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        restartables.Clear();
+
+        FindObjectOfType<FadeInOut>().fadeout();
+
+        //Fade out.
     }
 }

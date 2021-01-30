@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Escondite : MonoBehaviour
+public class Escondite : MonoBehaviour , RestartableObject
 {
     private SpriteRenderer sRenderer;
     private SpriteRenderer sRendererOutline;
@@ -24,12 +24,21 @@ public class Escondite : MonoBehaviour
 
     BoxCollider2D colliderBox;
 
+    public Vector3 initPos { get; set; }
+    public Quaternion initRot { get; set; }
+
     private void Start()
     {
+        InitRestart();
+
         sRenderer = GetComponent<SpriteRenderer>();
         sRendererOutline = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
         colliderBox = GetComponents<BoxCollider2D>()[1];
+
+
+        playerMovement = FindObjectOfType<CharacterMovement>();
+        playerTransform = playerMovement.transform;
     }
 
     private void Update()
@@ -66,8 +75,6 @@ public class Escondite : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerTransform = collision.gameObject.GetComponent<Transform>();
-            playerMovement = collision.gameObject.GetComponent<CharacterMovement>();
             playerArround = true;
         }
     }
@@ -77,6 +84,26 @@ public class Escondite : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerArround = false;
+        }
+    }
+
+    public void InitRestart()
+    {
+        GameManager.instance.restartables.Add(this);
+    }
+
+    public void Restart()
+    {
+        if (playerMovement.hiding)
+        {
+            sRenderer.sprite = opened;
+            sRendererOutline.sprite = openedOutline;
+            sRenderer.color = opaque;
+            sRendererOutline.color = opaque;
+            playerTransform.position = spawnSpot.position;
+            playerMovement.hiding = false;
+            colliderBox.enabled = true;
+            playerMovement.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }
