@@ -834,11 +834,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741730812}
   m_CullTransparentMesh: 1
---- !u!1 &790083662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3860604584111371980, guid: b5bd4a8ac000e7048830a2958ce4fd7c, type: 3}
-  m_PrefabInstance: {fileID: 1849419655}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &816025044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,22 +1211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 333170725, guid: b5bd4a8ac000e7048830a2958ce4fd7c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 333170725, guid: b5bd4a8ac000e7048830a2958ce4fd7c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 8777191681831084373, guid: b5bd4a8ac000e7048830a2958ce4fd7c, type: 3}
       propertyPath: m_Name
       value: escondite1
       objectReference: {fileID: 0}
-    - target: {fileID: 8777191681831084375, guid: b5bd4a8ac000e7048830a2958ce4fd7c, type: 3}
-      propertyPath: highlight
-      value: 
-      objectReference: {fileID: 790083662}
     - target: {fileID: 8777191681831084377, guid: b5bd4a8ac000e7048830a2958ce4fd7c, type: 3}
       propertyPath: m_RootOrder
       value: 14

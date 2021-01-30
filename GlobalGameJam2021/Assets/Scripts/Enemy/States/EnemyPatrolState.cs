@@ -15,7 +15,6 @@ public class EnemyPatrolState : State<EnemyMachine>
     {
         entity.aiPath.maxSpeed = entity.patrolSpeed;
 
-
         if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
     }
 
@@ -30,7 +29,12 @@ public class EnemyPatrolState : State<EnemyMachine>
         }
         else if (entity.HeardSomething())
         {
-            entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
+          /*  entity.CheckMaxPathLength();
+
+            if (entity.pathLengthOk)
+            {*/
+                entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
+            //}
         }
     }
 

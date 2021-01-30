@@ -26,7 +26,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
     private RestartableObject restartableCam;
     private Vector3 movement;
     private Animator animator;
-    private Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
 
     private void Start()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMachine : MonoBehaviour , RestartableObject
+public class EnemyMachine : MonoBehaviour, RestartableObject
 {
     private StateMachine<EnemyMachine> stateMachine;
     public StateMachine<EnemyMachine> pStateMachine
@@ -15,7 +15,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     [HideInInspector] public Quaternion initRot { get; set; }
 
 
-     [HideInInspector] public float timer = 0.0f;
+    [HideInInspector] public float timer = 0.0f;
 
 
     [Header("PATROL")]
@@ -49,26 +49,34 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     public float chaseSpeed = 1;
     public float heardSomethingSpeed = 1;
 
+    [Header("CONTROL")]
+    public float maxLengthPath = 20f;
+
     [Header("DEBUG")]
     public bool drawGizmos = false;
 
     //Extern Components;
     [HideInInspector] public Pathfinding.AIDestinationSetter destinationSetter;
     [HideInInspector] public Pathfinding.AIPath aiPath;
+    [HideInInspector] public Pathfinding.Seeker seeker;
 
     [HideInInspector] public Transform player;
     [HideInInspector] public CharacterLight playerLight;
     [HideInInspector] public Rigidbody2D playerRB;
     [HideInInspector] public CharacterMovement playerMovement;
 
-   
-    
-    
+    [HideInInspector] public bool cMakingPathCheckLength;
+    [HideInInspector] public bool pathLengthOk = false;
+
+    public int pathCheckTimes = 0;
+    public int maxPathCheckTimes = 3;
+    public float cooldownTimerPathCheck = 3f;
+
+
+    private bool playerLastHide;
 
     public void InitRestart()
     {
-
-
         initPos = transform.position;
         initRot = transform.rotation;
     }
@@ -99,7 +107,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
         Gizmos.DrawLine(transform.position + downRayDirection, transform.position + upRayDirection);
 
 
-        if(player != null & enemyEyes != null)
+        if (player != null & enemyEyes != null)
         {
             Gizmos.DrawLine(enemyEyes.position, enemyEyes.position + (player.position - enemyEyes.position));
         }
@@ -107,7 +115,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
         Gizmos.DrawWireSphere(transform.position, hearNormalSteps);
         Gizmos.DrawWireSphere(transform.position, hearCrouchSteps);
         Gizmos.DrawWireSphere(transform.position, hearRandomSounds);
-        
+
     }
 
 
@@ -115,6 +123,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     {
         destinationSetter = GetComponent<Pathfinding.AIDestinationSetter>();
         aiPath = GetComponent<Pathfinding.AIPath>();
+        seeker = GetComponent<Pathfinding.Seeker>();
 
         playerMovement = FindObjectOfType<CharacterMovement>();
         player = playerMovement.transform;
@@ -124,7 +133,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
 
 
     private void Start()
-    {      
+    {
         InitRestart();
 
 
@@ -135,6 +144,13 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     private void Update()
     {
         stateMachine.UpdateMachine();
+      
+
+    }
+
+    private void LateUpdate()
+    {
+        playerLastHide = playerMovement.hiding;
     }
 
 
@@ -142,13 +158,16 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     {
         Vector2 direction = player.position - enemyEyes.position;
 
+        if (playerMovement.hiding && playerLastHide == playerMovement.hiding)
+            return false;
+
         if (direction.magnitude < closeRange)
             return true;
 
-        if((direction.magnitude > coneRange && playerLight.isOn) || (direction.magnitude > coneRangeWhenLightOff && !playerLight.isOn))
+        if ((direction.magnitude > coneRange && playerLight.isOn) || (direction.magnitude > coneRangeWhenLightOff && !playerLight.isOn))
             return false;
 
-        bool isOnCone = Vector2.Angle(enemyEyes.up, direction.normalized) < coneAngle/2f;
+        bool isOnCone = Vector2.Angle(enemyEyes.up, direction.normalized) < coneAngle / 2f;
 
         if (isOnCone && !Physics.Linecast(enemyEyes.position, player.position, enemyMask.value))
         {
@@ -162,18 +181,28 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     {
         if (playerMovement.crouch)
         {
-           return CheckMovingSound(hearCrouchSteps);
+            return CheckMovingSound(hearCrouchSteps);
         }
         else
         {
-           return CheckMovingSound(hearNormalSteps);
+            return CheckMovingSound(hearNormalSteps);
         }
 
-       // return false;
+        // return false;
     }
 
     public bool CheckMovingSound(float hearSteps)
     {
+        if(pathCheckTimes >= maxPathCheckTimes)
+        {
+            if (!cMakingPathCheckLength)
+            {
+                StartCoroutine(CooldownPathLength());
+            }
+
+            return false;
+        }
+
         Vector2 direction = player.position - enemyEyes.position;
 
         float magnitude = direction.magnitude;
@@ -186,6 +215,7 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
             if (movingX || movingY)
             {
                 lastHeardTransform.position = player.position;
+                destinationSetter.target = lastHeardTransform;
                 return true;
             }
         }
@@ -198,5 +228,26 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
         lastHeardTransform.position = position;
 
         stateMachine.ChangeState(HearedSomethingState.Instance);
+    }
+
+    public bool CheckMaxPathLength()
+    {
+        bool x = aiPath.GetPathLength() < maxLengthPath;
+
+        if (!x)
+            pathCheckTimes++;
+
+        return x;
+    }
+
+    IEnumerator CooldownPathLength()
+    {
+        cMakingPathCheckLength = true;
+
+        yield return new WaitForSeconds(cooldownTimerPathCheck);
+
+        pathCheckTimes = 0;
+
+        cMakingPathCheckLength = false;
     }
 }
