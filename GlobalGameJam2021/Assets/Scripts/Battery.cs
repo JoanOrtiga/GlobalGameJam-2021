@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Battery : MonoBehaviour
+public class Battery : MonoBehaviour , RestartableObject
 {
     public bool playerArround = false;
     private CharacterLight character;
+
+    public Vector3 initPos { get; set; }
+    public Quaternion initRot { get; set; }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && playerArround)
         {
             character.AddLight();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -31,5 +34,20 @@ public class Battery : MonoBehaviour
         {
             playerArround = false;
         }
+    }
+
+    private void Start()
+    {
+        InitRestart();
+    }
+
+    public void InitRestart()
+    {
+        GameManager.instance.restartables.Add(this);
+    }
+
+    public void Restart()
+    {
+        gameObject.SetActive(true);
     }
 }
