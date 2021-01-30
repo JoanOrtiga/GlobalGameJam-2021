@@ -50,8 +50,16 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
         if (movingX || movingY) animator.SetBool("Walking", true);
         else animator.SetBool("Walking", false);
 
-        if (Input.GetKeyDown(KeyCode.LeftShift)) crouch = true;
-        else if (Input.GetKeyUp(KeyCode.LeftShift)) crouch = false;
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            crouch = true;
+            animator.speed = 0.5f;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            crouch = false;
+            animator.speed = 1f;
+        }
 
         direction = cursor.position - transform.position;
         direction.Normalize();
