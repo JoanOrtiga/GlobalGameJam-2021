@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class CharacterLight : MonoBehaviour
+public class CharacterLight : MonoBehaviour, RestartableObject
 {
+    [HideInInspector] public Vector3 initPos { get; set; }
+    [HideInInspector] public Quaternion initRot { get; set; }
+
     public Light2D playerLight;
 
     public bool isOn = true;
@@ -21,6 +24,11 @@ public class CharacterLight : MonoBehaviour
     //0 - empty
     //1 - full
 
+    private void Start()
+    {
+        GameManager.instance.restartables.Add(this);
+    }
+
     private void Update()
     {
         UpdateBatteryUI();
@@ -35,7 +43,8 @@ public class CharacterLight : MonoBehaviour
             LightOff();
         }
 
-        if (Input.GetKeyDown(KeyCode.E)) //Cambiar por GetButtonDown("CambiarLuz")
+        //Ajustar la tecla que se quiera usar
+        if (Input.GetButtonDown("Jump"))
         {
             if (isOn) LightOff();
             else LightOn();
@@ -49,15 +58,15 @@ public class CharacterLight : MonoBehaviour
         LightOn();
     }
 
-    void LightOn()
+    public void LightOn()
     {
-        playerLight.pointLightOuterRadius = 5;
+        playerLight.enabled = true;
         isOn = true;
     }
 
-    void LightOff()
+    public void LightOff()
     {
-        playerLight.pointLightOuterRadius = 1;
+        playerLight.enabled = false;
         isOn = false;
     }
 
@@ -75,5 +84,16 @@ public class CharacterLight : MonoBehaviour
             }
             else uiBatteries[i].sprite = sprites[0];
         }
+    }
+
+    public void InitRestart()
+    {
+
+    }
+
+    //Reinicia amb la llum al maxim
+    public void Restart()
+    {
+        AddLight();
     }
 }

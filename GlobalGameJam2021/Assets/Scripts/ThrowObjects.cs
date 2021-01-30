@@ -8,9 +8,18 @@ public class ThrowObjects : MonoBehaviour
     public GameObject throwObject;
     public LayerMask throwMask;
 
+    public float range = 10f;
+
+    public KeyCode pickObjects;
+
     private void Update()
     {
-        float range = 10f;
+        if (GameManager.instance.paused)
+            return;
+
+        if (throwObject == null)
+            return;
+
         RaycastHit2D raycast;
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -19,16 +28,33 @@ public class ThrowObjects : MonoBehaviour
 
             raycast = Physics2D.Raycast(transform.position, toMouse, range, throwMask.value);
 
-            GameObject throwing = Instantiate(throwObject, transform.position, Quaternion.identity);
+            throwObject.SetActive(true);
+            throwObject.transform.position = transform.position;
 
             if (raycast)
             {
-                print("hola");
-                throwing.GetComponent<ThrownObject>().finalPos = raycast.point;
+                throwObject.GetComponent<ThrownObject>().finalPos = raycast.point;
             }
             else
             {
-                throwing.GetComponent<ThrownObject>().finalPos = toMouse * range;
+                throwObject.GetComponent<ThrownObject>().finalPos = toMouse * range;
+            }
+
+            throwObject.GetComponent<ThrownObject>().enabled = true;
+
+            throwObject = null;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKey(pickObjects))
+        {
+            if (collision.CompareTag("PickeableObjects"))
+            {
+                collision.gameObject.SetActive(false);
+                collision.GetComponent<Collider2D>().enabled = false;
+                throwObject = collision.gameObject;
             }
         }
     }
