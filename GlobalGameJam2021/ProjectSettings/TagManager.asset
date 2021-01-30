@@ -17,7 +17,7 @@ TagManager:
   - Enemy
   - Player
   - Throwable Objects
-  - HidingSites
+  - Ignore Pathfinding
   - 
   - PathFinding Colliders
   - 

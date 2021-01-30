@@ -36,6 +36,8 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
     [Tooltip("Temps des de que deix de veure el jugador per deixar de perseguir.")] public float maxTimeWithoutSeeing;
     [Tooltip("Distancia en la qual el enemic et veurà si o si")] public float closeRange;
 
+    public float attackRange = 1f;
+
 
     [Header("HEARING")]
     public float hearNormalSteps = 10f;
@@ -77,12 +79,17 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
 
     public void InitRestart()
     {
+        GameManager.instance.restartables.Add(this);
+
         initPos = transform.position;
         initRot = transform.rotation;
     }
 
     public void Restart()
     {
+        currentWaypointID = 0;
+        stateMachine.ChangeState(EnemyPatrolState.Instance);
+
         transform.position = initPos;
         transform.rotation = initRot;
     }
