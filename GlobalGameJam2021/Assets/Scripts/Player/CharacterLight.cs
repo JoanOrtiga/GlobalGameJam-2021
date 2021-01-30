@@ -43,6 +43,7 @@ public class CharacterLight : MonoBehaviour, RestartableObject
             LightOff();
         }
 
+        //Ajustar la tecla que se quiera usar
         if (Input.GetButtonDown("Jump"))
         {
             if (isOn) LightOff();
@@ -57,13 +58,13 @@ public class CharacterLight : MonoBehaviour, RestartableObject
         LightOn();
     }
 
-    void LightOn()
+    public void LightOn()
     {
         playerLight.enabled = true;
         isOn = true;
     }
 
-    void LightOff()
+    public void LightOff()
     {
         playerLight.enabled = false;
         isOn = false;
