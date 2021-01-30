@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 3759091891
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -50,6 +53,12 @@ TagManager:
   - name: Decoration
     uniqueID: 3249561411
     locked: 0
+  - name: Wall
+    uniqueID: 180430359
+    locked: 0
   - name: Player
     uniqueID: 1676037251
+    locked: 0
+  - name: Armari
+    uniqueID: 2648249991
     locked: 0

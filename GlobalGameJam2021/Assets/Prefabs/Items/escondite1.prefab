@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &333170724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333170725}
+  m_Layer: 0
+  m_Name: HideSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333170725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333170724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8777191681831084377}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2197126167162414100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8982642877666180546}
+  m_Layer: 0
+  m_Name: SpawnSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8982642877666180546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2197126167162414100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8777191681831084377}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8777191681831084373
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +73,7 @@ GameObject:
   - component: {fileID: 8777191681831084375}
   - component: {fileID: 8777191681831084372}
   - component: {fileID: 1261253865}
+  - component: {fileID: 2093082030}
   m_Layer: 0
   m_Name: escondite1
   m_TagString: Untagged
@@ -32,6 +93,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8777191682720526620}
+  - {fileID: 333170725}
+  - {fileID: 8982642877666180546}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -72,8 +135,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1045405885
-  m_SortingLayer: 2
+  m_SortingLayerID: -1646717305
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a515632c3aa808499ee0634a2edf896, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,7 +195,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8777191681831084373}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -151,6 +214,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.125, y: 1.375}
   m_EdgeRadius: 0
+--- !u!114 &2093082030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777191681831084373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b24e9192f7f94489ed424c39cc010f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: {fileID: 21300000, guid: 5a515632c3aa808499ee0634a2edf896, type: 3}
+  openedOutline: {fileID: 21300000, guid: 3d025f5f2afe68645acc5736008a0a49, type: 3}
+  closed: {fileID: 21300000, guid: 01b1a32481ab63b42ab18ba1df77be7c, type: 3}
+  closedOutline: {fileID: 21300000, guid: f7fd066a830573640b5d5da12d1cfa84, type: 3}
+  transparent: {r: 1, g: 1, b: 1, a: 0.6156863}
+  opaque: {r: 1, g: 1, b: 1, a: 1}
+  hideSpot: {fileID: 333170725}
+  spawnSpot: {fileID: 8982642877666180546}
+  playerArround: 0
 --- !u!1 &8777191682720526618
 GameObject:
   m_ObjectHideFlags: 0
