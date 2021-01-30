@@ -5,7 +5,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour, RestartableObject
 {
     public float speed, crouchSpeed;
-    private bool crouch = false;
+    public bool hiding = false;
+    public bool crouch = false;
 
     private float GetSpeed
     {
@@ -16,6 +17,8 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
         }
     }
 
+    public Transform aim;
+    public Transform cursor;
     public Vector3 initPos { get; set; }
     public Quaternion initRot { get; set; }
 
