@@ -45,4 +45,12 @@ public class GameManager : MonoBehaviour
         paused = false;
         Time.timeScale = 1;
     }
+
+    public void Die()
+    {
+        foreach (var item in restartables)
+        {
+            item.Restart();
+        }
+    }
 }

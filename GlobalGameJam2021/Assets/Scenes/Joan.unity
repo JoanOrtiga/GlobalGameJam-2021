@@ -319,6 +319,7 @@ MonoBehaviour:
   enemyEyes: {fileID: 580020990}
   maxTimeWithoutSeeing: 2
   closeRange: 0.3
+  attackRange: 1
   hearNormalSteps: 9.13
   hearCrouchSteps: 3.84
   hearRandomSounds: 8.4
@@ -628,11 +629,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786233850678055758, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.02
+      value: -14.55
       objectReference: {fileID: 0}
     - target: {fileID: 7786233850678055758, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.47
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 7786233850678055758, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1172,6 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!50 &413071332
 Rigidbody2D:
   serializedVersion: 4
@@ -6235,7 +6237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36efc98569b23df47b61c542c1c6f75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInOutSpeed: 0
 --- !u!114 &627881610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6306,6 +6307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!58 &761699059
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6754,6 +6756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!50 &1184885088
 Rigidbody2D:
   serializedVersion: 4
@@ -6807,6 +6810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!50 &1210175172
 Rigidbody2D:
   serializedVersion: 4
@@ -7115,7 +7119,7 @@ GameObject:
   - component: {fileID: 1306107841}
   - component: {fileID: 1306107844}
   - component: {fileID: 1306107840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pila (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7134,6 +7138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!58 &1306107841
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12389,6 +12394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!58 &1836946995
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12587,6 +12593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1126cede343084e870965645042e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArround: 0
 --- !u!50 &1950507469
 Rigidbody2D:
   serializedVersion: 4

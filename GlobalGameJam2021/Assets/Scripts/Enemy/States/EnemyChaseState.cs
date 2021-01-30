@@ -27,10 +27,10 @@ public class EnemyChaseState : State<EnemyMachine>
         {
             if (entity.HeardSomething())
             {
-              /*  entity.CheckMaxPathLength();
+                /*  entity.CheckMaxPathLength();
 
-                if (entity.pathLengthOk)*/
-                    entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
+                  if (entity.pathLengthOk)*/
+                entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
             }
 
             entity.timer -= Time.deltaTime;
@@ -44,10 +44,20 @@ public class EnemyChaseState : State<EnemyMachine>
         {
             entity.timer = entity.maxTimeWithoutSeeing;
         }
+
+        CheckDeath(entity);
     }
+
+
 
     public override void Exit(EnemyMachine entity)
     {
 
+    }
+
+    public void CheckDeath(EnemyMachine entity)
+    {
+        if ((entity.player.position - entity.transform.position).magnitude < entity.attackRange)
+            GameManager.instance.Die();
     }
 }
