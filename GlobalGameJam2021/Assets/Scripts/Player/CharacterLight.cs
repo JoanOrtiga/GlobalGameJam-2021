@@ -19,10 +19,10 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     public int batteryCounter;
     public int batteryCounterMax;
 
+    public int batteryRecharge;
+
     public Image[] uiBatteries;
-    public Sprite[] sprites;
-    //0 - empty
-    //1 - full
+    public Text uiCounter;
 
     private void Start()
     {
@@ -50,23 +50,21 @@ public class CharacterLight : MonoBehaviour, RestartableObject
         {
             switch (isOn)
             {
-                case true:
-                    Debug.Log("OFFFFF");
-                    LightOff();
-                    break;
-                case false:
-                    Debug.Log("ONN");
-                    LightOn();
-                    break;
+                case true: LightOff(); break;
+                case false: LightOn(); break;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && batteryRecharge > 0)
+        {
+            batteryRecharge--;
+            Restart();
         }
     }
 
     public void AddLight()
     {
-        batteryCounter = batteryCounterMax;
-        batteryTimer = batteryTimerMax;
-        LightOn();
+        batteryRecharge++;
     }
 
     public void LightOn()
@@ -83,6 +81,8 @@ public class CharacterLight : MonoBehaviour, RestartableObject
 
     public void UpdateBatteryUI()
     {
+        uiCounter.text = "x" + batteryRecharge;
+
         float batteryPerc = 100 / batteryCounterMax;
         float timerPerc = batteryTimer * 100 / batteryTimerMax;
 
@@ -90,10 +90,10 @@ public class CharacterLight : MonoBehaviour, RestartableObject
         {
             if (i < timerPerc / batteryPerc)
             {
-                uiBatteries[i].sprite = sprites[1];
+                uiBatteries[i].enabled = true;
                 batteryCounter = i + 1;
             }
-            else uiBatteries[i].sprite = sprites[0];
+            else uiBatteries[i].enabled = false;
         }
     }
 
@@ -105,6 +105,8 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     //Reinicia amb la llum al maxim
     public void Restart()
     {
-        AddLight();
+        batteryCounter = batteryCounterMax;
+        batteryTimer = batteryTimerMax;
+        LightOn();
     }
 }
