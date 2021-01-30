@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce6638716d99d
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -220,6 +220,7 @@ MonoBehaviour:
   hiding: 0
   crouch: 0
   cursor: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!114 &7786233850678055757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +358,7 @@ MonoBehaviour:
   throwMask:
     serializedVersion: 2
     m_Bits: 0
+  mouse: {fileID: 0}
   range: 10
   pickObjects: 0
 --- !u!114 &2007661885
@@ -465,7 +467,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce6638716d99d
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
