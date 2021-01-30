@@ -226,6 +226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b24e9192f7f94489ed424c39cc010f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opened: {fileID: 21300000, guid: 5a515632c3aa808499ee0634a2edf896, type: 3}
+  openedOutline: {fileID: 21300000, guid: 3d025f5f2afe68645acc5736008a0a49, type: 3}
+  closed: {fileID: 21300000, guid: 01b1a32481ab63b42ab18ba1df77be7c, type: 3}
+  closedOutline: {fileID: 21300000, guid: f7fd066a830573640b5d5da12d1cfa84, type: 3}
   transparent: {r: 1, g: 1, b: 1, a: 0.6156863}
   opaque: {r: 1, g: 1, b: 1, a: 1}
   hideSpot: {fileID: 333170725}

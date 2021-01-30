@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour, RestartableObject
 {
-    public float speed, crouchSpeed;
-    public bool canMove = true;
+    public float speed, crouchSpeed, hideSpeed;
     public bool hiding = false;
     public bool crouch = false;
 
@@ -14,6 +13,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
         get
         {
             if (crouch) return crouchSpeed;
+            else if (hiding) return hideSpeed;
             else return speed;
         }
     }
@@ -46,7 +46,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
 
     private void FixedUpdate()
     {
-        if (canMove) rb.velocity = movement * GetSpeed;
+        rb.velocity = movement * GetSpeed;
     }
 
     public void InitRestart()

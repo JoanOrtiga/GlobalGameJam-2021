@@ -5,6 +5,7 @@ using UnityEngine;
 public class Highlight : MonoBehaviour
 {
     [SerializeField] private GameObject highlight;
+
     private void Start()
     {
         highlight.SetActive(false);

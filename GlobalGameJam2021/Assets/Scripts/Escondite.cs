@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class Escondite : MonoBehaviour
 {
-    private SpriteRenderer sprite;
-    private SpriteRenderer outline;
+    private SpriteRenderer sRenderer;
+    private SpriteRenderer sRendererOutline;
+
+    public Sprite opened;
+    public Sprite openedOutline;
+    public Sprite closed;
+    public Sprite closedOutline;
+
     public Color transparent;
     public Color opaque;
+
     public Transform hideSpot;
     public Transform spawnSpot;
+
     private Transform playerTransform;
     private CharacterMovement playerMovement;
     public bool playerArround = false;
 
     private void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
-        outline = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        sRenderer = GetComponent<SpriteRenderer>();
+        sRendererOutline = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -26,18 +34,20 @@ public class Escondite : MonoBehaviour
         {
             if (playerMovement.hiding)
             {
-                sprite.color = opaque;
-                outline.color = opaque;
+                sRenderer.sprite = opened;
+                sRendererOutline.sprite = openedOutline;
+                sRenderer.color = opaque;
+                sRendererOutline.color = opaque;
                 playerTransform.position = spawnSpot.position;
-                playerMovement.canMove = true;
                 playerMovement.hiding = false;
             }
             else
             {
-                sprite.color = transparent;
-                outline.color = transparent;
+                sRenderer.sprite = closed;
+                sRendererOutline.sprite = closedOutline;
+                sRenderer.color = transparent;
+                sRendererOutline.color = transparent;
                 playerTransform.position = hideSpot.position;
-                playerMovement.canMove = false;
                 playerMovement.hiding = true;
             }
         }

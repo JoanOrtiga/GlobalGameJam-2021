@@ -58,3 +58,6 @@ TagManager:
   - name: Player
     uniqueID: 1676037251
     locked: 0
+  - name: Armari
+    uniqueID: 2648249991
+    locked: 0
