@@ -7,6 +7,7 @@ public class ThrowObjects : MonoBehaviour
 
     public GameObject throwObject;
     public LayerMask throwMask;
+    public Transform mouse;
 
     public float range = 10f;
 
@@ -24,7 +25,7 @@ public class ThrowObjects : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Vector2 toMouse = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+            Vector2 toMouse = (mouse.position - transform.position).normalized;
 
             raycast = Physics2D.Raycast(transform.position, toMouse, range, throwMask.value);
 
@@ -37,7 +38,7 @@ public class ThrowObjects : MonoBehaviour
             }
             else
             {
-                throwObject.GetComponent<ThrownObject>().finalPos = toMouse * range;
+                throwObject.GetComponent<ThrownObject>().finalPos = toMouse * range + (Vector2)transform.position;
             }
 
             throwObject.GetComponent<ThrownObject>().enabled = true;
