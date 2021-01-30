@@ -25,15 +25,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //Esto se tiene que quitar al final
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            foreach (RestartableObject restartable in restartables)
-            {
-                restartable.Restart();
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!paused)
