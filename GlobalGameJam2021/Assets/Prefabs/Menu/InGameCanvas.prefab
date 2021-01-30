@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1784399971}
+      - m_Target: {fileID: 368538593474675909}
         m_TargetAssemblyTypeName: InGameMenu, Assembly-CSharp
         m_MethodName: OpenBook
         m_Mode: 1
@@ -222,6 +222,101 @@ MonoBehaviour:
     amatomaa papaar papaar no puedor diodenoo me cago en tus muelas te va a has\xE9
     pupitaa. No puedor torpedo jarl no puedor te voy a borrar el cerito apetecan
     ahorarr a wan benemeritaar torpedo a gramenawer."
+--- !u!1 &1943308558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943308559}
+  - component: {fileID: 1943308562}
+  - component: {fileID: 1943308561}
+  - component: {fileID: 1943308560}
+  m_Layer: 5
+  m_Name: FadePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1943308559
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943308558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3598619224519162806}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1943308562
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943308558}
+  m_CullTransparentMesh: 1
+--- !u!114 &1943308561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943308558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1943308560
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943308558}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 325f2b041f925aa4da076c10f73b5a4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1107844086528509888
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +529,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1784399971}
+      - m_Target: {fileID: 368538593474675909}
         m_TargetAssemblyTypeName: InGameMenu, Assembly-CSharp
         m_MethodName: CloseBook
         m_Mode: 1
@@ -691,6 +786,8 @@ GameObject:
   - component: {fileID: 3598619224519162804}
   - component: {fileID: 3598619224519162805}
   - component: {fileID: 1784399971}
+  - component: {fileID: 368538593474675909}
+  - component: {fileID: 6848100875847568323}
   m_Layer: 5
   m_Name: InGameCanvas
   m_TagString: Untagged
@@ -711,6 +808,7 @@ RectTransform:
   m_Children:
   - {fileID: 3598619223804085300}
   - {fileID: 3795566441981030962}
+  - {fileID: 1943308559}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -793,6 +891,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   book: {fileID: 4929446156214767470}
+--- !u!114 &368538593474675909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3598619224519162802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f31d96acded83f418fd9754cedfbb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  book: {fileID: 4929446156214767470}
+--- !u!114 &6848100875847568323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3598619224519162802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ff80fcf6837734f8dc5b5d8352bdec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1943308560}
 --- !u!1 &3598619224554596920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,6 +1333,7 @@ RectTransform:
   - {fileID: 355291142093185704}
   - {fileID: 3868945983762306153}
   - {fileID: 1709567990}
+  - {fileID: 773875504410949804}
   m_Father: {fileID: 3598619224519162806}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1255,6 +1380,96 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6152648387001454041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773875504410949804}
+  - component: {fileID: 946233454509036264}
+  - component: {fileID: 2457409670227852004}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &773875504410949804
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152648387001454041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3795566441981030962}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -230, y: 20}
+  m_SizeDelta: {x: 340, y: 550}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &946233454509036264
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152648387001454041}
+  m_CullTransparentMesh: 1
+--- !u!114 &2457409670227852004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6152648387001454041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Lorem fistrum est\xE1 la cosa muy malar a wan est\xE1 la cosa muy malar
+    benemeritaar ese pedazo de no te digo trigo por no llamarte Rodrigor de la pradera
+    benemeritaar a gramenawer diodeno. A wan te voy a borrar el cerito no puedor
+    condemor diodeno papaar papaar por la gloria de mi madre quietooor me cago en
+    tus muelas. No te digo trigo por no llamarte Rodrigor ese hombree mamaar va ust\xE9
+    muy cargadoo apetecan diodenoo va ust\xE9 muy cargadoo amatomaa no te digo trigo
+    por no llamarte Rodrigor ese pedazo de pupita. A peich se calle ust\xE9e ahorarr
+    se calle ust\xE9e condemor va ust\xE9 muy cargadoo no puedor. Est\xE1 la cosa
+    muy malar pecador diodenoo no te digo trigo por no llamarte Rodrigor no puedor
+    amatomaa papaar papaar no puedor diodenoo me cago en tus muelas te va a has\xE9
+    pupitaa. No puedor torpedo jarl no puedor te voy a borrar el cerito apetecan
+    ahorarr a wan benemeritaar torpedo a gramenawer."
 --- !u!1 &6260444100575727037
 GameObject:
   m_ObjectHideFlags: 0
