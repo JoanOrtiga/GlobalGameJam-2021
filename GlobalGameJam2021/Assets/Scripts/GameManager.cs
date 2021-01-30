@@ -68,20 +68,13 @@ public class GameManager : MonoBehaviour
 
     public void NextScene(int sceneToLoad)
     {
-        //Fade in.
-       FindObjectOfType<FadeInOut>().fadeIn();
-
-       
-
+        FindObjectOfType<FadeScript>().FadeIn();
         SceneManager.LoadScene(sceneToLoad);
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         restartables.Clear();
-
-        FindObjectOfType<FadeInOut>().fadeout();
-
-        //Fade out.
+        FindObjectOfType<FadeScript>().FadeOut();
     }
 }
