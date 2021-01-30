@@ -143,5 +143,6 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     public bool HeardSomething()
     {
         Vector2 direction = player.position - enemyEyes.position;
+        return false;
     }
 }
