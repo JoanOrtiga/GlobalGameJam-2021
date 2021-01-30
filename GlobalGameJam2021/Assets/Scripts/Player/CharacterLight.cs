@@ -59,13 +59,13 @@ public class CharacterLight : MonoBehaviour, RestartableObject
 
     void LightOn()
     {
-        playerLight.pointLightOuterRadius = 5;
+        playerLight.enabled = true;
         isOn = true;
     }
 
     void LightOff()
     {
-        playerLight.pointLightOuterRadius = 1;
+        playerLight.enabled = false;
         isOn = false;
     }
 
