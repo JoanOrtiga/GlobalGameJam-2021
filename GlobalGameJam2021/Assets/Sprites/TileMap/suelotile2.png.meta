@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 3f0a5087b5b83e645bfb67e281ff499d
+guid: 05205fe94fbfe984aa89a700b104c0d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4498175152306637415
-    second: suelodoble_0
+      213: -1280080532464246392
+    second: suelotile2_0
   - first:
-      213: 925440674243533708
-    second: suelodoble_1
+      213: 1986983570980364193
+    second: suelotile2_1
   - first:
-      213: 6992622657575100054
-    second: suelodoble_2
+      213: -1703200917708307056
+    second: suelotile2_2
   - first:
-      213: 1901072027248565121
-    second: suelodoble_3
+      213: -8338438915616027539
+    second: suelotile2_3
+  - first:
+      213: 2770450366970783770
+    second: suelotile2_4
+  - first:
+      213: -6460196041827739055
+    second: suelotile2_5
+  - first:
+      213: 5671528287112970679
+    second: suelotile2_6
+  - first:
+      213: 6876186389647385347
+    second: suelotile2_7
+  - first:
+      213: 1039339200556960805
+    second: suelotile2_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -80,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +118,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suelodoble_0
+      name: suelotile2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8816392b98d3c3ee0800000000000000
+      internalID: -1280080532464246392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelotile2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af52d2c70f239b10800000000000000
+      internalID: 1986983570980364193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelotile2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09580ee0ac30d58e0800000000000000
+      internalID: -1703200917708307056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelotile2_3
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ac9baf77abc6e30800000000000000
-      internalID: 4498175152306637415
+      spriteID: d6cc9653cf9e74c80800000000000000
+      internalID: -8338438915616027539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelodoble_1
+      name: suelotile2_4
       rect:
         serializedVersion: 2
         x: 32
@@ -138,14 +216,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8bdbf8d363d7dc00800000000000000
-      internalID: 925440674243533708
+      spriteID: a18e4272eed927620800000000000000
+      internalID: 2770450366970783770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelodoble_2
+      name: suelotile2_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a19737de5c856a0800000000000000
+      internalID: -6460196041827739055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelotile2_6
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e9c113249ca0160800000000000000
-      internalID: 6992622657575100054
+      spriteID: 7b1c2f69de055be40800000000000000
+      internalID: 5671528287112970679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelodoble_3
+      name: suelotile2_7
       rect:
         serializedVersion: 2
         x: 32
@@ -180,8 +279,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b159cbfe6f16a10800000000000000
-      internalID: 1901072027248565121
+      spriteID: 303ee4cf61f1d6f50800000000000000
+      internalID: 6876186389647385347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: suelotile2_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c065a0f797c6e00800000000000000
+      internalID: 1039339200556960805
       vertices: []
       indices: 
       edges: []

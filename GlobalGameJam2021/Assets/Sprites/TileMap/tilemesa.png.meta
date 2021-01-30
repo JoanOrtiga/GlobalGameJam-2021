@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 3f0a5087b5b83e645bfb67e281ff499d
+guid: 35981a528ac078b4b94f67c505c75abd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4498175152306637415
-    second: suelodoble_0
+      213: 4019955522971939612
+    second: tilemesa_0
   - first:
-      213: 925440674243533708
-    second: suelodoble_1
+      213: -1442167363343355238
+    second: tilemesa_1
   - first:
-      213: 6992622657575100054
-    second: suelodoble_2
+      213: -3687377677337855011
+    second: tilemesa_2
   - first:
-      213: 1901072027248565121
-    second: suelodoble_3
+      213: 3838694638949443517
+    second: tilemesa_3
+  - first:
+      213: 6077915101869492077
+    second: tilemesa_4
+  - first:
+      213: 2692943884694988997
+    second: tilemesa_5
+  - first:
+      213: 7654994907528492284
+    second: tilemesa_6
+  - first:
+      213: 8830481763278071698
+    second: tilemesa_7
+  - first:
+      213: 7278461735845249044
+    second: tilemesa_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -80,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +118,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suelodoble_0
+      name: tilemesa_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13bc9fdf30c9c730800000000000000
+      internalID: 4019955522971939612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemesa_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92f1498c646cfbe0800000000000000
+      internalID: -1442167363343355238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemesa_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb729df98dc3dcc0800000000000000
+      internalID: -3687377677337855011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemesa_3
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ac9baf77abc6e30800000000000000
-      internalID: 4498175152306637415
+      spriteID: db727c39f68c54530800000000000000
+      internalID: 3838694638949443517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelodoble_1
+      name: tilemesa_4
       rect:
         serializedVersion: 2
         x: 32
@@ -138,14 +216,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8bdbf8d363d7dc00800000000000000
-      internalID: 925440674243533708
+      spriteID: d67c9ed3597195450800000000000000
+      internalID: 6077915101869492077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelodoble_2
+      name: tilemesa_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c82e4ff1324f5520800000000000000
+      internalID: 2692943884694988997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemesa_6
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e9c113249ca0160800000000000000
-      internalID: 6992622657575100054
+      spriteID: cf4f8ac7f410c3a60800000000000000
+      internalID: 7654994907528492284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: suelodoble_3
+      name: tilemesa_7
       rect:
         serializedVersion: 2
         x: 32
@@ -180,8 +279,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b159cbfe6f16a10800000000000000
-      internalID: 1901072027248565121
+      spriteID: 29721c7b06c2c8a70800000000000000
+      internalID: 8830481763278071698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemesa_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4104454c26a420560800000000000000
+      internalID: 7278461735845249044
       vertices: []
       indices: 
       edges: []
