@@ -20,4 +20,9 @@ public class Pause : MonoBehaviour
                 pauseMenu.SetActive(false);
         }
     }
+
+    public void GoMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
