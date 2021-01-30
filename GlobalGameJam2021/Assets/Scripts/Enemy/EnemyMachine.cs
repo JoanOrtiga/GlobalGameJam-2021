@@ -37,6 +37,12 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
     [Tooltip("Distancia en la qual el enemic et veurà si o si")] public float closeRange;
 
 
+    [Header("HEARING")]
+    public float hearNormalSteps = 10f;
+    public float hearCrouchSteps = 4f;
+    public float hearRandomSounds = 5f;
+    public Transform lastHeardTransform;
+    public float timeToReturn = 1f;
 
     [Header("DEBUG")]
     public bool drawGizmos = false;
@@ -47,6 +53,10 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
 
     [HideInInspector] public Transform player;
     [HideInInspector] public CharacterLight playerLight;
+    [HideInInspector] public Rigidbody2D playerRB;
+    [HideInInspector] public CharacterMovement playerMovement;
+
+   
     
     
 
@@ -89,6 +99,10 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
             Gizmos.DrawLine(enemyEyes.position, enemyEyes.position + (player.position - enemyEyes.position).normalized * 5);
             Gizmos.DrawLine(enemyEyes.transform.position, enemyEyes.transform.position + transform.up * 5);
         }
+
+        Gizmos.DrawWireSphere(transform.position, hearNormalSteps);
+        Gizmos.DrawWireSphere(transform.position, hearCrouchSteps);
+        Gizmos.DrawWireSphere(transform.position, hearRandomSounds);
         
     }
 
@@ -98,10 +112,10 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
         destinationSetter = GetComponent<Pathfinding.AIDestinationSetter>();
         aiPath = GetComponent<Pathfinding.AIPath>();
 
-        player = FindObjectOfType<CharacterMovement>().transform;
-        playerLight = FindObjectOfType<CharacterLight>();
-
-     
+        playerMovement = FindObjectOfType<CharacterMovement>();
+        player = playerMovement.transform;
+        playerLight = player.GetComponent<CharacterLight>();
+        playerRB = player.GetComponent<Rigidbody2D>();
     }
 
 
@@ -142,7 +156,36 @@ public class EnemyMachine : MonoBehaviour , RestartableObject
 
     public bool HeardSomething()
     {
+        if (playerMovement.crouch)
+        {
+           return CheckMovingSound(hearCrouchSteps);
+        }
+        else
+        {
+           return CheckMovingSound(hearNormalSteps);
+        }
+
+       // return false;
+    }
+
+    public bool CheckMovingSound(float hearSteps)
+    {
         Vector2 direction = player.position - enemyEyes.position;
+
+        float magnitude = direction.magnitude;
+
+        if (magnitude < hearSteps)
+        {
+            bool movingX = playerRB.velocity.x > 0.0001f || playerRB.velocity.x < -0.0001f;
+            bool movingY = playerRB.velocity.y > 0.0001f || playerRB.velocity.y < -0.0001f;
+
+            if (movingX || movingY)
+            {
+                lastHeardTransform.position = player.position;
+                return true;
+            }
+        }
+
         return false;
     }
 }
