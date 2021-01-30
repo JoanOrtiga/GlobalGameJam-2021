@@ -15,6 +15,8 @@ public class HearedSomethingState : State<EnemyMachine>
     {
         entity.destinationSetter.target = entity.lastHeardTransform;
         entity.timer = entity.timeToReturn;
+
+        entity.aiPath.maxSpeed = entity.heardSomethingSpeed;
     }
 
     public override void Execute(EnemyMachine entity)

@@ -13,6 +13,9 @@ public class EnemyPatrolState : State<EnemyMachine>
 
     public override void Enter(EnemyMachine entity)
     {
+        entity.aiPath.maxSpeed = entity.patrolSpeed;
+
+
         if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
     }
 

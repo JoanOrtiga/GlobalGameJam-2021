@@ -15,6 +15,9 @@ public class EnemyChaseState : State<EnemyMachine>
         entity.timer = 0.0f;
 
         entity.destinationSetter.target = entity.player.transform;
+
+        entity.aiPath.maxSpeed = entity.chaseSpeed;
+
     }
 
     public override void Execute(EnemyMachine entity)
