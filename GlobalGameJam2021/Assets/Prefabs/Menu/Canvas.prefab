@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -477,8 +477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 287}
-  m_SizeDelta: {x: 840, y: 200}
+  m_AnchoredPosition: {x: -20, y: 240}
+  m_SizeDelta: {x: 900, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &989213710174306267
 CanvasRenderer:
@@ -510,11 +510,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
-    m_FontSize: 200
+    m_FontSize: 250
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 200
+    m_MaxSize: 250
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78cb2933d92b16d43a4de6620f2cba48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd3d3b0da37eeb04db3e8980e0bf3c8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unselectedCol: {r: 1, g: 1, b: 1, a: 1}
-  selectedCol: {r: 0.7735849, g: 0.63179576, b: 0.64065754, a: 1}
+  selectedCol: {r: 0.81960785, g: 0.7411765, b: 0.52156866, a: 1}
 --- !u!1 &1437397912885274978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,8 +2931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11773dabd6e8534f8f51e4dfb0983a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unselectedCol: {r: 1, g: 1, b: 1, a: 1}
-  selectedCol: {r: 0.85882354, g: 0.77254903, b: 0.7019608, a: 1}
+  unselectedCol: {r: 0.85882354, g: 0.77254903, b: 0.7019608, a: 1}
+  selectedCol: {r: 0.5, g: 0.45456803, b: 0.41778976, a: 1}
 --- !u!1 &2510488922528740217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,7 +3602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3611,7 +3611,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
-    m_FontSize: 70
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -3650,8 +3650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11773dabd6e8534f8f51e4dfb0983a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unselectedCol: {r: 1, g: 1, b: 1, a: 1}
-  selectedCol: {r: 0.85882354, g: 0.77254903, b: 0.7019608, a: 1}
+  unselectedCol: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  selectedCol: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
 --- !u!1 &2510488922882742489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,8 +3924,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 337}
-  m_SizeDelta: {x: 840, y: 300}
+  m_AnchoredPosition: {x: -20, y: 400}
+  m_SizeDelta: {x: 900, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2510488923125160708
 CanvasRenderer:
@@ -3957,7 +3957,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
-    m_FontSize: 80
+    m_FontSize: 120
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -4155,8 +4155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11773dabd6e8534f8f51e4dfb0983a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unselectedCol: {r: 1, g: 1, b: 1, a: 1}
-  selectedCol: {r: 0.85882354, g: 0.77254903, b: 0.7019608, a: 1}
+  unselectedCol: {r: 0.85882354, g: 0.77254903, b: 0.7019608, a: 1}
+  selectedCol: {r: 0.5, g: 0.45456803, b: 0.41778976, a: 1}
 --- !u!1 &2510488923255134893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5588,7 +5588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a8cd1b63964de84ab43c82451e07891, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e23199598c741ad4b9a19b7890504885, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5905,7 +5905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db9911d8d3a5ee34886b8031edb66949, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b944d8b4d2e76084b878bf84db99e87d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

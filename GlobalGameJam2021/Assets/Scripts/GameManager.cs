@@ -69,8 +69,6 @@ public class GameManager : MonoBehaviour
     public void NextScene(int sceneToLoad)
     {
         //Fade in.
-       FindObjectOfType<FadeInOut>().fadeIn();
-
        
 
         SceneManager.LoadScene(sceneToLoad);
@@ -79,8 +77,6 @@ public class GameManager : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         restartables.Clear();
-
-        FindObjectOfType<FadeInOut>().fadeout();
 
         //Fade out.
     }
