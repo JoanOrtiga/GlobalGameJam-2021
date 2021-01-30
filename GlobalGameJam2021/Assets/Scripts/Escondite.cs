@@ -22,10 +22,14 @@ public class Escondite : MonoBehaviour
     private CharacterMovement playerMovement;
     public bool playerArround = false;
 
+    BoxCollider2D colliderBox;
+
     private void Start()
     {
         sRenderer = GetComponent<SpriteRenderer>();
         sRendererOutline = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
+        colliderBox = GetComponents<BoxCollider2D>()[1];
     }
 
     private void Update()
@@ -40,6 +44,8 @@ public class Escondite : MonoBehaviour
                 sRendererOutline.color = opaque;
                 playerTransform.position = spawnSpot.position;
                 playerMovement.hiding = false;
+                colliderBox.enabled = true;
+                playerMovement.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
             else
             {
@@ -49,6 +55,9 @@ public class Escondite : MonoBehaviour
                 sRendererOutline.color = transparent;
                 playerTransform.position = hideSpot.position;
                 playerMovement.hiding = true;
+                colliderBox.enabled = false;
+                playerMovement.rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
             }
         }
     }
