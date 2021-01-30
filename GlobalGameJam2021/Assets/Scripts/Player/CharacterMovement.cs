@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour, RestartableObject
 {
     public float speed, crouchSpeed;
-    private bool crouch = false;
+    public bool crouch = false;
 
     private float GetSpeed
     {
