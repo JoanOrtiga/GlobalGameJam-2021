@@ -25,6 +25,10 @@ public class EnemyPatrolState : State<EnemyMachine>
         {
             entity.pStateMachine.ChangeState(EnemyChaseState.Instance);
         }
+        else if (entity.HeardSomething())
+        {
+            entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
+        }
     }
 
     public override void Exit(EnemyMachine entity)

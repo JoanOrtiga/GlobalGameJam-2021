@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public float speed, crouchSpeed;
-    private bool crouch = false;
+    [HideInInspector] public bool crouch = false;
     private float GetSpeed
     {
         get
