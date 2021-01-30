@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour, RestartableObject
 {
     public float speed, crouchSpeed;
+    public bool canMove = true;
     public bool hiding = false;
     public bool crouch = false;
 
@@ -45,7 +46,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
 
     private void FixedUpdate()
     {
-        rb.velocity = movement * GetSpeed;
+        if (canMove) rb.velocity = movement * GetSpeed;
     }
 
     public void InitRestart()
