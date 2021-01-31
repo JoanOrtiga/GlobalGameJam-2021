@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
         {
             Die();
         }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            NextScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void Pause()
