@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6881097656230244847, guid: 76ce144a8ce220f43ad2fd5d0bd903d5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ce144a8ce220f43ad2fd5d0bd903d5, type: 3}
@@ -1174,10 +1174,6 @@ PrefabInstance:
       propertyPath: books.Array.data[3]
       value: 
       objectReference: {fileID: 1371837587}
-    - target: {fileID: 2007661883, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7786233850678055757, guid: dfe5a62ad17a1b74097f04870fef1183, type: 3}
       propertyPath: uiCounter
       value: 
