@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: f61101fa9120d794ca41e2fc9246ada5
   - enabled: 1
+    path: Assets/Scenes/Marc.unity
+    guid: 64bd4ac98b7779b43b6337468777bcd0
+  - enabled: 1
     path: Assets/Scenes/plantilla 1.unity
     guid: 2eb140ff6e5a06a46a281787fc43c8a6
   - enabled: 1
