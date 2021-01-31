@@ -42,7 +42,7 @@ public class ThrownObject : MonoBehaviour , RestartableObject
 
         if (((Vector2)transform.position - finalPos).magnitude < margin)
         {
-            GetComponent<AudioSource>().Play();
+            
             foreach (Collider2D item in Physics2D.OverlapCircleAll(transform.position, maxHearRange, enemyLayer))
             {
                 EnemyMachine em = item.GetComponent<EnemyMachine>();
@@ -55,9 +55,12 @@ public class ThrownObject : MonoBehaviour , RestartableObject
                 }
             }
 
-            colliderThrown.enabled = true;
-            this.enabled = false;
+            GetComponent<AudioSource>().Play();
 
+            colliderThrown.enabled = true;
+          
+            this.enabled = false;
+            
         }
     }
 
