@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class CursorHide : MonoBehaviour
 {
-    void Start()
-    {
-        HideCursor();
-    }
-
     public void HideCursor()
     {
         Cursor.visible = false;
