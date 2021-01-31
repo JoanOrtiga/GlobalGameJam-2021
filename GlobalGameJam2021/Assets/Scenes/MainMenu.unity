@@ -369,46 +369,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 998064422560390622, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 998064422560390622, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 998064422853495320, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 998064422853495320, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 998064422853495320, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161786005219605781, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161786005219605781, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161786005219605781, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161786005530505399, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161786005530505399, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2510488922215084233, guid: a3463904542c3844894046b19736e5dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -496,18 +456,6 @@ PrefabInstance:
     - target: {fileID: 2510488922215084277, guid: a3463904542c3844894046b19736e5dd, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510488923125160707, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_Text
-      value: The Forgotten
-      objectReference: {fileID: 0}
-    - target: {fileID: 2510488923724450565, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4361180856887123111, guid: a3463904542c3844894046b19736e5dd, type: 3}
-      propertyPath: m_Text
-      value: Books
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3463904542c3844894046b19736e5dd, type: 3}

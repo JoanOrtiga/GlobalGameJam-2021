@@ -733,7 +733,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Library
+  m_Text: Books
 --- !u!114 &2394921715108681479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Dise\xF1o y M\xFAsica"
+  m_Text: Desig & Music
 --- !u!1 &1932781717314103012
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,7 +4197,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Lost
+  m_Text: The Forgotten
 --- !u!114 &904932920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5403,7 +5403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programaci\xF3n"
+  m_Text: Programming
 --- !u!1 &5078017757866426953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arte
+  m_Text: Art
 --- !u!1 &7669931342220206963
 GameObject:
   m_ObjectHideFlags: 0
@@ -6508,15 +6508,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881489486979, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_Name
@@ -6608,11 +6608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881517959654, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881517959654, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
@@ -6825,23 +6825,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768327693259, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768327693259, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 535bc674b05fce44182700f86971256d, type: 3}
