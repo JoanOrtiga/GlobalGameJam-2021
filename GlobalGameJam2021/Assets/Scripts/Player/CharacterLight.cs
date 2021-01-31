@@ -25,10 +25,16 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     public Text uiCounter;
 
     public GameObject particles;
+
+    public bool test = false;
+
     private void Start()
     {
         GameManager.instance.restartables.Add(this);
-        batteryTimer = batteryTimerMax;
+        if (test)
+            batteryTimer = 10;
+        else
+            batteryTimer = batteryTimerMax;
         LightOff();
         isOn = false;
     }
@@ -72,7 +78,7 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     {
         playerLight.enabled = true;
         isOn = true;
-        particles.SetActive(true); 
+        particles.SetActive(true);
     }
 
     public void LightOff()
@@ -108,7 +114,7 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     //Reinicia amb la llum al maxim
     public void Restart()
     {
-        if(batteryCounter <= 1)
+        if (batteryCounter <= 1)
         {
             batteryCounter = 2;
         }
