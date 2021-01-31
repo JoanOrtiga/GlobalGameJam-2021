@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CharacterInventory : MonoBehaviour
 {
     public int bookCounter;
-    public Image[] books;
+    [HideInInspector]public Image[] books;
     public Color missingColor;
     public Color foundColor;
 
