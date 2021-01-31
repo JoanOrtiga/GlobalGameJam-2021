@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public bool paused;
 
+    public bool dying;
+
     private void Awake()
     {
         if (instance == null)
@@ -60,10 +62,32 @@ public class GameManager : MonoBehaviour
 
     public void Die()
     {
+        if (!dying)
+            StartCoroutine(Dying());
+    }
+
+    IEnumerator Dying()
+    {
+        dying = true;
+
+        FindObjectOfType<FadeScript>().FadeIn();
+
+        yield return new WaitForSeconds(0.8f);
+
+        Time.timeScale = 0;
+
         foreach (var item in restartables)
         {
             item.Restart();
         }
+
+        FindObjectOfType<FadeScript>().FadeOut();
+
+        yield return new WaitForSecondsRealtime(0.25f);
+
+        Time.timeScale = 1;
+
+        dying = false;
     }
 
     public void NextScene(int sceneToLoad)
