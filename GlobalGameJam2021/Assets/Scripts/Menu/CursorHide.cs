@@ -6,11 +6,11 @@ public class CursorHide : MonoBehaviour
 {
     public void HideCursor()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     public void ShowCursor()
     {
-        Cursor.visible = true;
+        //Cursor.visible = true;
     }
 }
