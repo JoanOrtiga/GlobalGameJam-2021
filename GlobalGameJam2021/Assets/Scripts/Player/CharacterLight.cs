@@ -111,6 +111,6 @@ public class CharacterLight : MonoBehaviour, RestartableObject
         }
 
         batteryTimer = batteryTimerMax;
-        LightOn();
+        LightOff();
     }
 }
