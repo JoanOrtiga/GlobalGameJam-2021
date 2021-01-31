@@ -63,3 +63,6 @@ TagManager:
   - name: Armari
     uniqueID: 2648249991
     locked: 0
+  - name: Cursor
+    uniqueID: 520186711
+    locked: 0
