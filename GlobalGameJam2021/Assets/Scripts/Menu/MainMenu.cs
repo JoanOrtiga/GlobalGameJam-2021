@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject creditsMenu;
 
-    IEnumerator LoadingAsync (int index)
+    IEnumerator LoadingAsync(int index)
     {
         yield return new WaitForSeconds(2);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(index);
@@ -50,5 +50,11 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    private void Start()
+    {
+        if (optionsMenu != null)
+            optionsMenu.SetActive(false);
     }
 }

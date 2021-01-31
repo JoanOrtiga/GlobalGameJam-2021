@@ -7,6 +7,8 @@ public class Tutorial : MonoBehaviour
     private int index = 0;
     [SerializeField] private GameObject[] elements;
     private bool hint = false;
+    public InGameMenu book;
+
     void Start()
     {
         for (int i = 0; i < elements.Length; i++)
@@ -18,11 +20,14 @@ public class Tutorial : MonoBehaviour
     {
         if (index == 0) //jump
         {
-            elements[index].SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (book.bookOpened == false)
             {
-                elements[index].SetActive(false);
-                index++;
+                elements[index].SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    elements[index].SetActive(false);
+                    index++;
+                }
             }
         }
         else if (index == 1)
