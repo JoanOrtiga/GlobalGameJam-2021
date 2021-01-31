@@ -24,6 +24,7 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     public Image[] uiBatteries;
     public Text uiCounter;
 
+    public GameObject particles;
     private void Start()
     {
         GameManager.instance.restartables.Add(this);
@@ -71,12 +72,14 @@ public class CharacterLight : MonoBehaviour, RestartableObject
     {
         playerLight.enabled = true;
         isOn = true;
+        particles.SetActive(true); 
     }
 
     public void LightOff()
     {
         playerLight.enabled = false;
         isOn = false;
+        particles.SetActive(false);
     }
 
     public void UpdateBatteryUI()
