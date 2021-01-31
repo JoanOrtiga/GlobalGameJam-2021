@@ -11,9 +11,8 @@ public class CharacterInventory : MonoBehaviour
     public Color missingColor;
     public Color foundColor;
 
-    private void Start()
+    void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         bookCounter = SceneManager.GetActiveScene().buildIndex - 1;
 
         GameObject[] booksArray = GameObject.FindGameObjectsWithTag("LibrosUI");
@@ -22,7 +21,7 @@ public class CharacterInventory : MonoBehaviour
         {
             Image tempImg = booksArray[i].GetComponent<Image>();
             books[i] = tempImg;
-            books[i].color = missingColor;
+           // books[i].color = missingColor;
         }
 
         if (bookCounter > 0)
@@ -31,7 +30,7 @@ public class CharacterInventory : MonoBehaviour
             {
 
                 print(bookCounter);
-                books[i].color = foundColor;
+              //  books[i].color = foundColor;
             }
         }
     }
