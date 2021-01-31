@@ -21,6 +21,8 @@ public class EnemyChaseState : State<EnemyMachine>
         entity.timer = entity.maxTimeWithoutSeeing;
 
         entity.exclamationMark.SetActive(true);
+
+        AudioManager.audioInstance.IsBeingAttacked();
     }
 
     public override void Execute(EnemyMachine entity)
@@ -52,6 +54,8 @@ public class EnemyChaseState : State<EnemyMachine>
     public override void Exit(EnemyMachine entity)
     {
         entity.exclamationMark.SetActive(false);
+
+        AudioManager.audioInstance.StopAttacking();
     }
 
     public void CheckDeath(EnemyMachine entity)

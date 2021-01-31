@@ -79,6 +79,8 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
 
     private bool playerLastHide;
 
+
+
     public void InitRestart()
     {
         GameManager.instance.restartables.Add(this);
