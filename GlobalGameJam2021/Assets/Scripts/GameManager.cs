@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
             Die();
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && SceneManager.GetActiveScene().buildIndex < 5)
         {
             NextScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
