@@ -130,8 +130,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1676037251
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &806306992
 MonoBehaviour:
@@ -425,7 +425,7 @@ MonoBehaviour:
   - {x: -0.26730266, y: -0.24880782, z: 0}
   m_ShapePathHash: -1407299887
   m_Mesh: {fileID: 0}
-  m_InstanceId: -567840
+  m_InstanceId: 589766
 --- !u!114 &1546031777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,9 +575,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1676037251
+  m_SortingLayer: 4
+  m_SortingOrder: -1
   m_Sprite: {fileID: -5210431323076732729, guid: f0d23dd250620394ca7b2574acfe8097, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -688,22 +688,22 @@ MonoBehaviour:
   untilPathOff: 0
   coneAngle: 34.2
   coneRange: 3.8
-  coneRangeWhenLightOff: 1.71
+  coneRangeWhenLightOff: 2.8
   enemyMask:
     serializedVersion: 2
     m_Bits: 55
   enemyEyes: {fileID: 767308122618847414}
   maxTimeWithoutSeeing: 1.5
   closeRange: 0.53
-  attackRange: 0.57
+  attackRange: 1
   hearNormalSteps: 3.73
   hearCrouchSteps: 1.2
   hearRandomSounds: 4.54
   lastHeardTransform: {fileID: 767308123398236840}
   timeToReturn: 3
   patrolSpeed: 1.5
-  chaseSpeed: 2
-  heardSomethingSpeed: 1
+  chaseSpeed: 4.5
+  heardSomethingSpeed: 1.5
   maxLengthPath: 20
   questionMark: {fileID: 1265690930}
   exclamationMark: {fileID: 851053297}
