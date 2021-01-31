@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
         {
             collision.GetComponent<RestartableObject>().InitRestart();
             checkpointActive = true;
-            Debug.Log("Checkpoint");
+           
         }
     }
 }
