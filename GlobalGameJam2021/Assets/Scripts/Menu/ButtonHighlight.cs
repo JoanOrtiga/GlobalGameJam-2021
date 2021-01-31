@@ -17,13 +17,11 @@ public class ButtonHighlight : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse Enter");
         image.color = selectedCol;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse Exit");
         image.color = unselectedCol;
     }
 }

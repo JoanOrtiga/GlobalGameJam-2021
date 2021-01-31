@@ -16,7 +16,6 @@ public class MainMenu : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            Debug.Log(asyncLoad.progress);
             yield return null;
         }
     }
