@@ -23,11 +23,13 @@ public class Pause : MonoBehaviour
 
     public void GoMenu()
     {
+        GameManager.instance.UnPause();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
     public void HidePause()
     {
+        GameManager.instance.UnPause();
         pauseMenu.SetActive(false);
     }
 }
