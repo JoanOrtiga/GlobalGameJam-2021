@@ -17,7 +17,7 @@ public class TutorialDosCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (item.pillado)
+        if (item.pillado && !tutorialActive)
         {
             tutorialCanvas.SetActive(true);
             tutorialActive = true;
