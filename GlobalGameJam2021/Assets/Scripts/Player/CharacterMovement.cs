@@ -24,7 +24,6 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
     public Vector3 initPos { get; set; }
     public Quaternion initRot { get; set; }
 
-    private RestartableObject restartableCam;
     private Vector3 movement;
     private Animator animator;
     [HideInInspector] public Rigidbody2D rb;
@@ -34,7 +33,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
     private void Start()
     {
         GameManager.instance.restartables.Add(this);
-        restartableCam = Camera.main.GetComponent<RestartableObject>();
+        InitRestart();
         lightManager = GetComponent<CharacterLight>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -76,14 +75,12 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
 
     public void InitRestart()
     {
-        restartableCam.InitRestart();
         initPos = transform.position;
         initRot = transform.rotation;
     }
 
     public void Restart()
     {
-        restartableCam.Restart();
         transform.position = initPos;
         transform.rotation = initRot;
         hiding = false;

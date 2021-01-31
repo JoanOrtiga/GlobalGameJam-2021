@@ -13,6 +13,8 @@ public class ThrowObjects : MonoBehaviour
 
     public KeyCode pickObjects;
 
+    bool delay;
+
     private void Update()
     {
         if (GameManager.instance.paused)
@@ -21,9 +23,12 @@ public class ThrowObjects : MonoBehaviour
         if (throwObject == null)
             return;
 
+        if (!delay)
+            return;
+
         RaycastHit2D raycast;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(pickObjects))
         {
             Vector2 toMouse = (mouse.position - transform.position).normalized;
 
@@ -44,20 +49,32 @@ public class ThrowObjects : MonoBehaviour
             throwObject.GetComponent<ThrownObject>().enabled = true;
 
             throwObject = null;
+            delay = false;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(pickObjects))
+        if (Input.GetKey(pickObjects) && throwObject == null)
         {
             if (collision.CompareTag("PickeableObjects"))
             {
                 collision.gameObject.SetActive(false);
                 collision.GetComponent<Collider2D>().enabled = false;
+
                 throwObject = collision.gameObject;
+
+                StartCoroutine(CoolDown());
             }
         }
+    }
+
+    IEnumerator CoolDown()
+    {
+        delay = false;
+        yield return new WaitForSeconds(0.1f);
+        delay = true;
+        
     }
 
 

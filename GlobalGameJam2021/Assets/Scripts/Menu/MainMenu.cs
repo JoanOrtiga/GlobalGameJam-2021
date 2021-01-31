@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadingAsync (int index)
     {
+        yield return new WaitForSeconds(2);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(index);
 
         while (!asyncLoad.isDone)

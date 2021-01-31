@@ -18,7 +18,7 @@ public class HearedSomethingState : State<EnemyMachine>
 
         entity.aiPath.maxSpeed = entity.heardSomethingSpeed;
 
-        
+        entity.questionMark.SetActive(true);
     }
 
     public override void Execute(EnemyMachine entity)
@@ -54,6 +54,6 @@ public class HearedSomethingState : State<EnemyMachine>
 
     public override void Exit(EnemyMachine entity)
     {
-
+        entity.questionMark.SetActive(false);
     }
 }
