@@ -81,6 +81,11 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
 
     public void Restart()
     {
+        GetComponent<ThrowObjects>().Reset();
+        
+
+
+
         transform.position = initPos;
         transform.rotation = initRot;
         hiding = false;

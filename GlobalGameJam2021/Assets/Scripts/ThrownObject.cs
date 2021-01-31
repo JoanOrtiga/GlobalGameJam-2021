@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrownObject : MonoBehaviour
+public class ThrownObject : MonoBehaviour , RestartableObject
 {
     public Vector2 finalPos;
 
@@ -20,9 +20,20 @@ public class ThrownObject : MonoBehaviour
 
     Collider2D colliderThrown;
 
+    public Vector3 initPos { get; set; }
+    public Quaternion initRot { get; set; }
+
     private void Awake()
     {
         colliderThrown = GetComponent<Collider2D>();
+    }
+
+    private void Start()
+    {
+        GameManager.instance.restartables.Add(this);
+        InitRestart();
+
+        this.enabled = false;
     }
 
     private void Update()
@@ -58,4 +69,20 @@ public class ThrownObject : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, maxHearRange);
     }
 
+    public void InitRestart()
+    {
+        initPos = transform.position;
+        initRot = transform.rotation;
+    }
+
+    public void Restart()
+    {
+        gameObject.SetActive(true);
+
+        transform.position = initPos;
+        transform.rotation = initRot;
+
+        colliderThrown.enabled = true;
+        this.enabled = false;
+    }
 }

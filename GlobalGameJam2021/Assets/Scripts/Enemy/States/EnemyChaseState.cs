@@ -27,15 +27,12 @@ public class EnemyChaseState : State<EnemyMachine>
     {
         if (!entity.SeesPlayer())
         {
-            if (entity.HeardSomething())
-            {
-                /*  entity.CheckMaxPathLength();
+            entity.timer -= Time.deltaTime;
 
-                  if (entity.pathLengthOk)*/
+            if (entity.HeardSomething() && entity.timer <= 0)
+            {
                 entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
             }
-
-            entity.timer -= Time.deltaTime;
 
             if (entity.timer <= 0)
             {
