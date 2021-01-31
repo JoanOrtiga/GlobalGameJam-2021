@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 32a5ff8186220da409ba29559093f0f2
+guid: 24dba578be1fd694dada68c48ae3d798
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3415603557240521557
-    second: alfombra 1_0
+      213: -6104271778465217033
+    second: alfombra_0
   - first:
-      213: -2179900155611000141
-    second: alfombra 1_1
+      213: -6497922502890559287
+    second: alfombra_1
   - first:
-      213: 7490456346986509199
-    second: alfombra 1_2
+      213: -8310536375548781469
+    second: alfombra_2
   - first:
-      213: -7777544402740968567
-    second: alfombra 1_3
+      213: -7341395924293194889
+    second: alfombra_3
+  - first:
+      213: -6066193695925995005
+    second: alfombra_4
+  - first:
+      213: -753645042437144744
+    second: alfombra_5
+  - first:
+      213: 5619426451418884074
+    second: alfombra_6
+  - first:
+      213: -3345800436275494257
+    second: alfombra_7
+  - first:
+      213: -7485747246188057099
+    second: alfombra_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: alfombra 1_0
+      name: alfombra_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bac3e1d49a65990d0800000000000000
-      internalID: -3415603557240521557
+      spriteID: 7f58328c825494ba0800000000000000
+      internalID: -6104271778465217033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alfombra 1_1
+      name: alfombra_1
       rect:
         serializedVersion: 2
         x: 32
@@ -138,14 +153,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2dcfaab507fb1e0800000000000000
-      internalID: -2179900155611000141
+      spriteID: 9c8e03d39edb2d5a0800000000000000
+      internalID: -6497922502890559287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alfombra 1_2
+      name: alfombra_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cd372923b0bac80800000000000000
+      internalID: -8310536375548781469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alfombra_3
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8373b78c5273f760800000000000000
-      internalID: 7490456346986509199
+      spriteID: 77be001ad4f1e1a90800000000000000
+      internalID: -7341395924293194889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alfombra 1_3
+      name: alfombra_4
       rect:
         serializedVersion: 2
         x: 32
@@ -180,8 +216,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9830cc9a29c901490800000000000000
-      internalID: -7777544402740968567
+      spriteID: 30afd9f39fc80dba0800000000000000
+      internalID: -6066193695925995005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alfombra_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fbccea3d38a85f0800000000000000
+      internalID: -753645042437144744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alfombra_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7a146a5963cfd40800000000000000
+      internalID: 5619426451418884074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alfombra_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82c372ea345191d0800000000000000
+      internalID: -3345800436275494257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alfombra_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd2a907a884d1890800000000000000
+      internalID: -7485747246188057099
       vertices: []
       indices: 
       edges: []
