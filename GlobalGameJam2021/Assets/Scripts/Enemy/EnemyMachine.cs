@@ -53,6 +53,8 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
 
     [Header("CONTROL")]
     public float maxLengthPath = 20f;
+    public GameObject questionMark;
+    public GameObject exclamationMark;
 
     [Header("DEBUG")]
     public bool drawGizmos = false;
@@ -143,7 +145,6 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
     {
         InitRestart();
 
-
         stateMachine = new StateMachine<EnemyMachine>(this);
         stateMachine.ChangeState(EnemyPatrolState.Instance);
     }
@@ -151,8 +152,6 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
     private void Update()
     {
         stateMachine.UpdateMachine();
-      
-
     }
 
     private void LateUpdate()

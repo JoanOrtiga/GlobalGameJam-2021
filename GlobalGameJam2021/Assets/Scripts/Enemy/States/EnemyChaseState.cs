@@ -19,6 +19,8 @@ public class EnemyChaseState : State<EnemyMachine>
         entity.aiPath.maxSpeed = entity.chaseSpeed;
 
         entity.timer = entity.maxTimeWithoutSeeing;
+
+        entity.exclamationMark.SetActive(true);
     }
 
     public override void Execute(EnemyMachine entity)
@@ -52,7 +54,7 @@ public class EnemyChaseState : State<EnemyMachine>
 
     public override void Exit(EnemyMachine entity)
     {
-
+        entity.exclamationMark.SetActive(false);
     }
 
     public void CheckDeath(EnemyMachine entity)
