@@ -99,8 +99,6 @@ public class AudioManager : MonoBehaviour
 
     private void LevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        print("Xd");
-
         currentIndex++;
         SetMusicClip(musicClips[currentIndex]);
     }
