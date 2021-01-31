@@ -13,6 +13,7 @@ public class CharacterInventory : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         bookCounter = SceneManager.GetActiveScene().buildIndex - 1;
 
         GameObject[] booksArray = GameObject.FindGameObjectsWithTag("LibrosUI");
@@ -28,6 +29,8 @@ public class CharacterInventory : MonoBehaviour
         {
             for (int i = 0; i < bookCounter; i++)
             {
+
+                print(bookCounter);
                 books[i].color = foundColor;
             }
         }

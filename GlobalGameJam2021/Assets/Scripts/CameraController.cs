@@ -36,12 +36,6 @@ public class CameraController : MonoBehaviour, RestartableObject
 
             transform.position = new Vector3(posX, posY, transform.position.z);
         }
-
-        //TESTEO
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            StartCoroutine("Shake");
-        }
     }
 
     public IEnumerator Shake()

@@ -81,7 +81,6 @@ public class AudioManager : MonoBehaviour
     }
     public void IsBeingAttacked()
     {
-        print(currentIndex);
         SetMusicClip(attackClips[currentIndex % attackClips.Length]);
     }
     public void StopAttacking()
