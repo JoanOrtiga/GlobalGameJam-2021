@@ -361,8 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initSpeed: 0
-  speed: 4.5
-  crouchSpeed: 1.5
+  speed: 2.3
+  crouchSpeed: 1
   hideSpeed: 0
   hiding: 0
   crouch: 0
