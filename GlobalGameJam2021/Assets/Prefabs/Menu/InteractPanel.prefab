@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: to intercact
+  m_Text: to interact
 --- !u!1 &5502631555264028168
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 200
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5502631555264028170
 MonoBehaviour:
   m_ObjectHideFlags: 0
