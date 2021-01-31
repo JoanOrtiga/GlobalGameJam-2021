@@ -6,6 +6,7 @@ public class InGameMenu : MonoBehaviour
 {
     public GameObject book;
     private CursorHide cursor;
+    public bool bookOpened = true;
 
     private void Start()
     {
@@ -16,12 +17,14 @@ public class InGameMenu : MonoBehaviour
     public void OpenBook()
     {
         book.SetActive(true);
+        bookOpened = true;
         cursor.ShowCursor();
     }
     
     public void CloseBook()
     {
         book.SetActive(false);
+        bookOpened = false;
         cursor.HideCursor();
     }
 }
