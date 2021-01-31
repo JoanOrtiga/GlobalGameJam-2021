@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     public GameObject pauseMenu;
+    private FadeScript fade;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        fade = FindObjectOfType<FadeScript>();
+    }
+
     void Update()
     {
         if (GameManager.instance.paused)
@@ -23,13 +29,20 @@ public class Pause : MonoBehaviour
 
     public void GoMenu()
     {
-        GameManager.instance.UnPause();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        fade.FadeIn();
+        StartCoroutine(BackToMenu());
     }
 
     public void HidePause()
     {
         GameManager.instance.UnPause();
         pauseMenu.SetActive(false);
+    }
+
+    IEnumerator BackToMenu()
+    {
+        yield return new WaitForSeconds(1);
+        GameManager.instance.UnPause();
+        SceneManager.LoadScene(0);
     }
 }
