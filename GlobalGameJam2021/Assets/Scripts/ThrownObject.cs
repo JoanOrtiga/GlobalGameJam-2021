@@ -30,6 +30,7 @@ public class ThrownObject : MonoBehaviour , RestartableObject
 
     private void Start()
     {
+        GameManager.instance.restartables.Add(this);
         InitRestart();
     }
 
@@ -68,12 +69,17 @@ public class ThrownObject : MonoBehaviour , RestartableObject
 
     public void InitRestart()
     {
-       
+        initPos = transform.position;
+        initRot = transform.rotation;
     }
 
     public void Restart()
     {
         gameObject.SetActive(true);
+
+        transform.position = initPos;
+        transform.rotation = initRot;
+
         GetComponent<Collider2D>().enabled = true;
         this.enabled = false;
     }

@@ -22,8 +22,6 @@ public class EnemyPatrolState : State<EnemyMachine>
     {
         if (!entity.staticPatrolling)
             Move(entity);
-        else
-
 
         if (entity.SeesPlayer())
         {

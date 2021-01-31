@@ -77,7 +77,13 @@ public class ThrowObjects : MonoBehaviour
 
     public void Reset()
     {
-        throwObject = null;
+        if (throwObject != null)
+        {
+            throwObject.SetActive(true);
+
+            throwObject = null;
+        }
+
         delay = false;
     }
 }
