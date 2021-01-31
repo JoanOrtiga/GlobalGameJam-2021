@@ -8,7 +8,7 @@ public class InGameMenu : MonoBehaviour
 
     private void Start()
     {
-        book.SetActive(false);
+        //book.SetActive(false);
     }
 
     public void OpenBook()
