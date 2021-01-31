@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
                 UnPause();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             Die();
         }

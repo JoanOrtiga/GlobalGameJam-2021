@@ -304,18 +304,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Lorem fistrum est\xE1 la cosa muy malar a wan est\xE1 la cosa muy malar
-    benemeritaar ese pedazo de no te digo trigo por no llamarte Rodrigor de la pradera
-    benemeritaar a gramenawer diodeno. A wan te voy a borrar el cerito no puedor
-    condemor diodeno papaar papaar por la gloria de mi madre quietooor me cago en
-    tus muelas. No te digo trigo por no llamarte Rodrigor ese hombree mamaar va ust\xE9
-    muy cargadoo apetecan diodenoo va ust\xE9 muy cargadoo amatomaa no te digo trigo
-    por no llamarte Rodrigor ese pedazo de pupita. A peich se calle ust\xE9e ahorarr
-    se calle ust\xE9e condemor va ust\xE9 muy cargadoo no puedor. Est\xE1 la cosa
-    muy malar pecador diodenoo no te digo trigo por no llamarte Rodrigor no puedor
-    amatomaa papaar papaar no puedor diodenoo me cago en tus muelas te va a has\xE9
-    pupitaa. No puedor torpedo jarl no puedor te voy a borrar el cerito apetecan
-    ahorarr a wan benemeritaar torpedo a gramenawer."
+  m_Text: 'Since the creation of our world, people has written lots of books. Some
+    of them, are very famous, like the holy bible, Don Quijote, Lord of the rings
+    or Harry Potter. Some others, are unknown, and have been forgotten by society.
+
+
+    This
+    list of books, are 4 books that disappeared long time ago. From shakespeare to
+    Homer, you have to find this 4 books in a secret library that you have found.
+
+
+    But
+    be aware, there have been reports of strange creatures inhabiting this library.
+
+
+    Good
+    luck, you will need it.
+
+'
 --- !u!1 &1943308558
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 169.3, y: -94}
+  m_AnchoredPosition: {x: 169.2998, y: -94}
   m_SizeDelta: {x: -1470, y: -990}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2067818355
@@ -784,7 +790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1858758760353721354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1154,7 +1160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3598619223804085300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1771,7 +1777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3795566441981030962
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1790,7 +1796,7 @@ RectTransform:
   - {fileID: 355291142093185704}
   - {fileID: 3868945983762306153}
   - {fileID: 1709567990}
-  - {fileID: 773875504410949804}
+  - {fileID: 1990484730502230296}
   m_Father: {fileID: 3598619224519162806}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2127,96 +2133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &6152648387001454041
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 773875504410949804}
-  - component: {fileID: 946233454509036264}
-  - component: {fileID: 2457409670227852004}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &773875504410949804
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6152648387001454041}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3795566441981030962}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 20}
-  m_SizeDelta: {x: 340, y: 550}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &946233454509036264
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6152648387001454041}
-  m_CullTransparentMesh: 1
---- !u!114 &2457409670227852004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6152648387001454041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Lorem fistrum est\xE1 la cosa muy malar a wan est\xE1 la cosa muy malar
-    benemeritaar ese pedazo de no te digo trigo por no llamarte Rodrigor de la pradera
-    benemeritaar a gramenawer diodeno. A wan te voy a borrar el cerito no puedor
-    condemor diodeno papaar papaar por la gloria de mi madre quietooor me cago en
-    tus muelas. No te digo trigo por no llamarte Rodrigor ese hombree mamaar va ust\xE9
-    muy cargadoo apetecan diodenoo va ust\xE9 muy cargadoo amatomaa no te digo trigo
-    por no llamarte Rodrigor ese pedazo de pupita. A peich se calle ust\xE9e ahorarr
-    se calle ust\xE9e condemor va ust\xE9 muy cargadoo no puedor. Est\xE1 la cosa
-    muy malar pecador diodenoo no te digo trigo por no llamarte Rodrigor no puedor
-    amatomaa papaar papaar no puedor diodenoo me cago en tus muelas te va a has\xE9
-    pupitaa. No puedor torpedo jarl no puedor te voy a borrar el cerito apetecan
-    ahorarr a wan benemeritaar torpedo a gramenawer."
 --- !u!1 &6260444100575727037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,6 +3020,91 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &9141244560796106951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990484730502230296}
+  - component: {fileID: 7161972602153610225}
+  - component: {fileID: 3310225924775860263}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1990484730502230296
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141244560796106951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3795566441981030962}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -230, y: -394.3}
+  m_SizeDelta: {x: 340, y: 550}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7161972602153610225
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141244560796106951}
+  m_CullTransparentMesh: 1
+--- !u!114 &3310225924775860263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9141244560796106951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Espa\xF1ol: \nDesde la creacion de nuestro mundo, la gente ha escrito
+    muchos libros. La biblia, Don quijote, el Se\xF1or de los Anillos o Harry Potter
+    son algunos de ellos. Algunos otros, son desconocidos y han quedado en el olvido.\n\nEsta
+    lista, son 4 libros que han desaparecido a lo largo del tiempo. Desde Shakespeare
+    a Homero, tienes que encontrar los 4 libros en la libreria secreta que has encontrado.\n\nPero
+    ve con cuidado, tenga en cuenta que ha habido informes de extra\xF1as criaturas
+    que habitan esta biblioteca.\n\nBuena suerte, lo vas a necesitar."
 --- !u!1001 &1084781872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3113,15 +3114,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881208104004, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3225,11 +3226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881517959654, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881517959654, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2183718881918678980, guid: d738d79547e3e3348b0eec1382f01d16, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3343,23 +3344,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768327693259, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768327693259, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6438672768638559245, guid: 535bc674b05fce44182700f86971256d, type: 3}
       propertyPath: m_SizeDelta.x
