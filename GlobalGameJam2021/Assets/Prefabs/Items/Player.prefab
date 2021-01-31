@@ -121,6 +121,78 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce6638716d99d
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 1
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 3.090944
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &2503295018401992527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3529483652844864967}
+  - component: {fileID: 7009162667518543455}
+  m_Layer: 0
+  m_Name: Point Light 2D (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3529483652844864967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503295018401992527}
+  m_LocalRotation: {x: -0, y: -0, z: -0.016169574, w: 0.9998693}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 7786233850678055758}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7009162667518543455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503295018401992527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.593
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.4
+  m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce663
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -163,7 +235,7 @@ GameObject:
   - component: {fileID: 2007661885}
   - component: {fileID: 1279853868}
   - component: {fileID: 1907338845}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -184,6 +256,7 @@ Transform:
   - {fileID: 7786233851279170047}
   - {fileID: 1876865938}
   - {fileID: 1488162313}
+  - {fileID: 3529483652844864967}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -287,8 +360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a9a0dcf2f50b54eb058224a7110244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.3
-  crouchSpeed: 1.2
+  initSpeed: 0
+  speed: 4.5
+  crouchSpeed: 1.5
   hideSpeed: 0
   hiding: 0
   crouch: 0
@@ -319,6 +393,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   uiCounter: {fileID: 0}
+  particles: {fileID: 0}
 --- !u!82 &2007661884
 AudioSource:
   m_ObjectHideFlags: 0
@@ -430,10 +505,10 @@ MonoBehaviour:
   throwObject: {fileID: 0}
   throwMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2679
   mouse: {fileID: 0}
-  range: 10
-  pickObjects: 0
+  range: 5
+  pickObjects: 101
 --- !u!114 &2007661885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +616,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.71091646, b: 0.4481132, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce663
+  m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce66300000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
