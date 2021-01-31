@@ -25,4 +25,9 @@ public class Pause : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
+    public void HidePause()
+    {
+        pauseMenu.SetActive(false);
+    }
 }
