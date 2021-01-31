@@ -125,6 +125,9 @@ public class EnemyMachine : MonoBehaviour, RestartableObject
         Gizmos.DrawWireSphere(transform.position, hearCrouchSteps);
         Gizmos.DrawWireSphere(transform.position, hearRandomSounds);
 
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+
     }
 
 

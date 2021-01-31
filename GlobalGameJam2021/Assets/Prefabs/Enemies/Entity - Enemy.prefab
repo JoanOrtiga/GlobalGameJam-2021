@@ -1,5 +1,77 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &128085258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128085259}
+  - component: {fileID: 128085260}
+  m_Layer: 6
+  m_Name: Point Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128085259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128085258}
+  m_LocalRotation: {x: -0, y: -0, z: 0.011529386, w: 0.9999336}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 767308123167586999}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &128085260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128085258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.688
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.24
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: b3300fe000000000dbbba881435fb0c11726c10a834ce6638716d99d
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1.7495961
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &806306989
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +105,7 @@ RectTransform:
   - {fileID: 1265690931}
   - {fileID: 851053298}
   m_Father: {fileID: 767308123167586999}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 186.706}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -291,7 +363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767308123167586999}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1546031776
 MonoBehaviour:
@@ -353,7 +425,7 @@ MonoBehaviour:
   - {x: -0.26730266, y: -0.24880782, z: 0}
   m_ShapePathHash: -1407299887
   m_Mesh: {fileID: 0}
-  m_InstanceId: 467978
+  m_InstanceId: -567840
 --- !u!114 &1546031777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,16 +527,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767308123167586997}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6409112, w: -0.7676151}
-  m_LocalPosition: {x: -13.361265, y: -9.471974, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.71986187, w: 0.69411737}
+  m_LocalPosition: {x: -1.9251049, y: 6.357268, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 767308122618847414}
+  - {fileID: 128085259}
   - {fileID: 1546031775}
   - {fileID: 806306990}
   m_Father: {fileID: 767308124463882775}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 280.28}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -92.086}
 --- !u!212 &767308123167586998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,27 +681,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   staticPatrolling: 1
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 767308123778765970}
   currentWaypointID: 0
   untilPathOff: 0
-  coneAngle: 62.97
-  coneRange: 4
-  coneRangeWhenLightOff: 1.5
+  coneAngle: 34.2
+  coneRange: 3.8
+  coneRangeWhenLightOff: 1.71
   enemyMask:
     serializedVersion: 2
     m_Bits: 55
   enemyEyes: {fileID: 767308122618847414}
   maxTimeWithoutSeeing: 1.5
-  closeRange: 0.3
-  attackRange: 1
-  hearNormalSteps: 9.13
-  hearCrouchSteps: 3.84
-  hearRandomSounds: 0.18
+  closeRange: 0.53
+  attackRange: 0.57
+  hearNormalSteps: 3.73
+  hearCrouchSteps: 1.2
+  hearRandomSounds: 4.54
   lastHeardTransform: {fileID: 767308123398236840}
-  timeToReturn: 5
-  patrolSpeed: 1
-  chaseSpeed: 4
-  heardSomethingSpeed: 4
+  timeToReturn: 3
+  patrolSpeed: 1.5
+  chaseSpeed: 2
+  heardSomethingSpeed: 1
   maxLengthPath: 20
   questionMark: {fileID: 1265690930}
   exclamationMark: {fileID: 851053297}
@@ -658,9 +733,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00057171384, y: 0.015695056}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.27829397
 --- !u!95 &9491069
 Animator:
   serializedVersion: 3
@@ -734,7 +809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767308123778765969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.41, y: 1.83, z: 0}
+  m_LocalPosition: {x: 3.04, y: 6.242, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767308123876497516}
@@ -796,7 +871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767308124395998263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.56, y: -4.41, z: 0}
+  m_LocalPosition: {x: -4.77, y: 5.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 767308123876497516}
