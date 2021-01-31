@@ -1158,11 +1158,11 @@ GameObject:
   - component: {fileID: 3598619224519162807}
   - component: {fileID: 3598619224519162804}
   - component: {fileID: 3598619224519162805}
-  - component: {fileID: 1784399971}
   - component: {fileID: 368538593474675909}
   - component: {fileID: 6848100875847568323}
   - component: {fileID: 7349258100695608086}
   - component: {fileID: 2346013730882637819}
+  - component: {fileID: 1706305449357569452}
   m_Layer: 5
   m_Name: InGameCanvas
   m_TagString: Untagged
@@ -1255,19 +1255,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1784399971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598619224519162802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f31d96acded83f418fd9754cedfbb4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  book: {fileID: 4929446156214767470}
 --- !u!114 &368538593474675909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,7 +1306,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c839375449148845ad316a6d9cc06f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinPanel: {fileID: 0}
+  WinPanel: {fileID: 3188473215481446951}
+--- !u!114 &1706305449357569452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3598619224519162802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b54c3bc5c4dbba438f503e3dccc8807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3598619224554596920
 GameObject:
   m_ObjectHideFlags: 0
