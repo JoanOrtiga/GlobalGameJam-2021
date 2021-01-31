@@ -106,7 +106,6 @@ public class Escondite : MonoBehaviour , RestartableObject
             playerTransform.position = spawnSpot.position;
             playerMovement.hiding = false;
             colliderBox.enabled = true;
-            playerMovement.rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

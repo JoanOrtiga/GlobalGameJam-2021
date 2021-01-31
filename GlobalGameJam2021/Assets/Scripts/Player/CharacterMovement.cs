@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour, RestartableObject
 {
+    public float initSpeed;
     public float speed, crouchSpeed, hideSpeed;
     public bool hiding = false;
     public bool crouch = false;
@@ -34,6 +35,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
     {
         GameManager.instance.restartables.Add(this);
         InitRestart();
+        initSpeed = speed;
         lightManager = GetComponent<CharacterLight>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -82,10 +84,7 @@ public class CharacterMovement : MonoBehaviour, RestartableObject
     public void Restart()
     {
         GetComponent<ThrowObjects>().Reset();
-        
-
-
-
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         transform.position = initPos;
         transform.rotation = initRot;
         hiding = false;
