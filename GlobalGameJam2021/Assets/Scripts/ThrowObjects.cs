@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ThrowObjects : MonoBehaviour
 {
-
     public GameObject throwObject;
     public LayerMask throwMask;
     public Transform mouse;
@@ -74,8 +73,11 @@ public class ThrowObjects : MonoBehaviour
         delay = false;
         yield return new WaitForSeconds(0.1f);
         delay = true;
-        
     }
 
-
+    public void Reset()
+    {
+        throwObject = null;
+        delay = false;
+    }
 }
