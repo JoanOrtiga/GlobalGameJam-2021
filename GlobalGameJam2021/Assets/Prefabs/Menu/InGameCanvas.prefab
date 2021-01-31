@@ -132,96 +132,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1709567989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1709567990}
-  - component: {fileID: 1709567992}
-  - component: {fileID: 1709567991}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1709567990
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709567989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3795566441981030962}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 20}
-  m_SizeDelta: {x: 340, y: 550}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1709567992
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709567989}
-  m_CullTransparentMesh: 1
---- !u!114 &1709567991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709567989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Lorem fistrum est\xE1 la cosa muy malar a wan est\xE1 la cosa muy malar
-    benemeritaar ese pedazo de no te digo trigo por no llamarte Rodrigor de la pradera
-    benemeritaar a gramenawer diodeno. A wan te voy a borrar el cerito no puedor
-    condemor diodeno papaar papaar por la gloria de mi madre quietooor me cago en
-    tus muelas. No te digo trigo por no llamarte Rodrigor ese hombree mamaar va ust\xE9
-    muy cargadoo apetecan diodenoo va ust\xE9 muy cargadoo amatomaa no te digo trigo
-    por no llamarte Rodrigor ese pedazo de pupita. A peich se calle ust\xE9e ahorarr
-    se calle ust\xE9e condemor va ust\xE9 muy cargadoo no puedor. Est\xE1 la cosa
-    muy malar pecador diodenoo no te digo trigo por no llamarte Rodrigor no puedor
-    amatomaa papaar papaar no puedor diodenoo me cago en tus muelas te va a has\xE9
-    pupitaa. No puedor torpedo jarl no puedor te voy a borrar el cerito apetecan
-    ahorarr a wan benemeritaar torpedo a gramenawer."
 --- !u!1 &1943308558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c839375449148845ad316a6d9cc06f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinPanel: {fileID: 0}
 --- !u!1 &3598619224554596920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1810,6 @@ RectTransform:
   - {fileID: 430103859555066331}
   - {fileID: 355291142093185704}
   - {fileID: 3868945983762306153}
-  - {fileID: 1709567990}
   - {fileID: 773875504410949804}
   m_Father: {fileID: 3598619224519162806}
   m_RootOrder: 1
@@ -2267,12 +2177,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3795566441981030962}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 20}
-  m_SizeDelta: {x: 340, y: 550}
+  m_AnchoredPosition: {x: -230, y: 0}
+  m_SizeDelta: {x: 390, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &946233454509036264
 CanvasRenderer:
@@ -2304,7 +2214,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c27af3f2262dafa449a6a076cd24c03b, type: 3}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2315,18 +2225,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Lorem fistrum est\xE1 la cosa muy malar a wan est\xE1 la cosa muy malar
-    benemeritaar ese pedazo de no te digo trigo por no llamarte Rodrigor de la pradera
-    benemeritaar a gramenawer diodeno. A wan te voy a borrar el cerito no puedor
-    condemor diodeno papaar papaar por la gloria de mi madre quietooor me cago en
-    tus muelas. No te digo trigo por no llamarte Rodrigor ese hombree mamaar va ust\xE9
-    muy cargadoo apetecan diodenoo va ust\xE9 muy cargadoo amatomaa no te digo trigo
-    por no llamarte Rodrigor ese pedazo de pupita. A peich se calle ust\xE9e ahorarr
-    se calle ust\xE9e condemor va ust\xE9 muy cargadoo no puedor. Est\xE1 la cosa
-    muy malar pecador diodenoo no te digo trigo por no llamarte Rodrigor no puedor
-    amatomaa papaar papaar no puedor diodenoo me cago en tus muelas te va a has\xE9
-    pupitaa. No puedor torpedo jarl no puedor te voy a borrar el cerito apetecan
-    ahorarr a wan benemeritaar torpedo a gramenawer."
+  m_Text: 'Since the creation of our world, people has written lots of books. Some
+    of them, are very famous, like the holy bible, Don Quijote, Lord of the rings
+    or Harry Potter. Some others, are unknown, and have been forgotten by society.
+
+
+
+    This
+    list of books, are 4 books that disappeared long time ago. From shakespeare to
+    Homer. You have to find this 4 books in a secret library that you have found.
+
+
+
+    But
+    be aware, there have been reports of strange creatures inhabiting this library.
+
+
+
+    Good
+    Luck, you will need it.'
 --- !u!1 &6260444100575727037
 GameObject:
   m_ObjectHideFlags: 0
