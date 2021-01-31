@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour, RestartableObject
     private void Start()
     {
         GameManager.instance.restartables.Add(this);
+        InitRestart();
     }
 
     private float RoundTwo(float num)

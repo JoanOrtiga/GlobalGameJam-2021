@@ -15,13 +15,15 @@ public class EnemyPatrolState : State<EnemyMachine>
     {
         entity.aiPath.maxSpeed = entity.patrolSpeed;
 
-        if (!entity.staticPatrolling) MoveToNextPatrolPosition(entity);
+        MoveToNextPatrolPosition(entity);
     }
 
     public override void Execute(EnemyMachine entity)
     {
         if (!entity.staticPatrolling)
             Move(entity);
+        else
+
 
         if (entity.SeesPlayer())
         {
@@ -29,11 +31,11 @@ public class EnemyPatrolState : State<EnemyMachine>
         }
         else if (entity.HeardSomething())
         {
-          /*  entity.CheckMaxPathLength();
+            /*  entity.CheckMaxPathLength();
 
-            if (entity.pathLengthOk)
-            {*/
-                entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
+              if (entity.pathLengthOk)
+              {*/
+            entity.pStateMachine.ChangeState(HearedSomethingState.Instance);
             //}
         }
     }
@@ -45,7 +47,13 @@ public class EnemyPatrolState : State<EnemyMachine>
 
     private void MoveToNextPatrolPosition(EnemyMachine entity)
     {
-        entity.destinationSetter.target = entity.waypoints[entity.currentWaypointID];
+        if (!entity.staticPatrolling)
+            entity.destinationSetter.target = entity.waypoints[entity.currentWaypointID];
+        else
+        {
+            entity.lastHeardTransform.position = entity.initPos;
+            entity.destinationSetter.target = entity.lastHeardTransform;
+        }
     }
 
     private void UpdateWaypointID(EnemyMachine entity)
