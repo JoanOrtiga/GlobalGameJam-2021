@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5072348650403939317}
   - component: {fileID: 5072348650403939322}
   m_Layer: 0
-  m_Name: Music
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicClips:
+  - {fileID: 8300000, guid: 5f1da4a4045bbde47a9e7b6218e96606, type: 3}
+  - {fileID: 8300000, guid: af885858958393c4498a18ffcd4e0941, type: 3}
+  - {fileID: 8300000, guid: cb43c95a26196cb4a8d73dc54e406011, type: 3}
+  - {fileID: 8300000, guid: 5d844a3923fb68c418850abb1fa2fc54, type: 3}
   - {fileID: 8300000, guid: af885858958393c4498a18ffcd4e0941, type: 3}
   attackClips:
+  - {fileID: 8300000, guid: 5f1da4a4045bbde47a9e7b6218e96606, type: 3}
+  - {fileID: 8300000, guid: dfa7311ba94fc854799a73f137039b1f, type: 3}
+  - {fileID: 8300000, guid: 81294c115e0575147982f54c6246059b, type: 3}
+  - {fileID: 8300000, guid: 370e86742eeaf6b459c4d70c34130a23, type: 3}
   - {fileID: 8300000, guid: dfa7311ba94fc854799a73f137039b1f, type: 3}
 --- !u!82 &5072348650403939317
 AudioSource:
