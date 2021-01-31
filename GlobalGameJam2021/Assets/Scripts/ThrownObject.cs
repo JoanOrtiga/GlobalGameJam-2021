@@ -27,8 +27,6 @@ public class ThrownObject : MonoBehaviour
 
     private void Update()
     {
-   
-
         transform.position = Vector2.Lerp(transform.position, finalPos, t * Time.deltaTime);
 
         if (((Vector2)transform.position - finalPos).magnitude < margin)
