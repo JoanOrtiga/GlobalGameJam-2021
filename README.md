@@ -1,2 +1,2 @@
-# GlobalGameJam-2020
- Our participation for global game jam 2020
+# GlobalGameJam-2021
+ Our participation for global game jam 2021
